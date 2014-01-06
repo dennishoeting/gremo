@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- general app strings -->
+
+    <string name="app_name">GreMoApp</string>
+
+    <!-- section headers -->
+
+    <string name="title_section1">Aktivität starten</string>
+    <string name="title_section2">Profil</string>
+    <string name="title_section3">Verlauf</string>
+
+    <!-- menu handlers -->
+
+    <string name="action_settings">Einstellungen</string>
+    <string name="action_help">Hilfe</string>
+    <string name="action_logout">Ausloggen</string>
+
+    <!-- GreMo Points -->
+
+    <string name="points_current">Aktuelle Punkte</string>
+    <string name="points_earned_alltime">Gesamte Punkte</string>
+    <string name="points_earned_lastweek">Punkte aus dieser Woche</string>
+    <string name="points_button_spend">Ausgegebend Punkte</string>
+    <string name="points_button_donate">Gespendet Punkte</string>
+
+    <!-- History -->
+
+    <string name="history_date">Datum</string>
+    <string name="history_action">Aktivität</string>
+    <string name="history_points">Punkte</string>
+
+    <!-- Action Bar -->
+
+    <string name="actionbar_refresh">Punkte</string>
+    <string name="points_earned_alltime_value" />
+    <string name="points_current_value" />
+    <string name="points_earned_lastweek_value" />
+    <string name="switch_net_localization">Netzwerke benutzen</string>
+    <string name="switch_gps_localization">GPS benutzen</string>
+    <string name="switch_wifi_localization">WLan benutzen</string>
+    <string name="switch_action">Starte Aktivität</string>
+    <string name="typeOfMovement">Bewegungstyp</string>
+    <string name="typeOfTracking">Verfolgungstyp</string>
+    <string name="StartStopAction">Starte/stope Aktivität</string>
+    <string name="biking">Rad fahren</string>
+    <string name="walking">Gehen</string>
+    <string name="switch_send">Senden Aktivieren</string>
+    <string name="sentMessages">Gesendete Nachrichten:</string>
+    <string name="unsentMessages">Ungesendete Nachrichten:</string>
+    <string name="DBView">Datenbank</string>
+    <string name="sentMessagesValue">0</string>
+    <string name="unsentMessagesValue">0</string>
+    <string name="refreshHistory">Verlauf aktualisieren</string>
+    <string name="refreshProfile">Profil aktualisieren</string>
+    <string name="updatingPoints">Punkte werden aktualisiert …</string>
+    <string name="updatedPoints">Punkte aktualisiert.</string>
+    <string name="updatedHistory">Verlauf aktualisiert.</string>
+    <string name="updatingHistory">Verlauf wird aktualisiert …</string>
+    <string name="switch_motion_sensor">Motion Sensor benutzen</string>
+    <string name="exitMessageTitle">Exit GreMo App</string>
+    <string name="no">Nein</string>
+    <string name="yes">Ja</string>
+    <string name="exitMessage">Wollen sie die Gremo App wirklich verlassen?</string>
+    <string name="NotificationTitle">GreMo App trackt noch</string>
+    <string name="sendMailChooser">Bitte senden sie die folgende E-Mail zur Verbesserung der Gremo
+        App
+    </string>
+    <string name="helpMessageTitle">Hilfe</string>
+    <string name="helpMessage">Wollen sie zur Gremo-Homepage
+        \"http://www.ma-gremo.de/\" wechseln?
+    </string>
+    <string name="history_distance">Entfernung</string>
+    <string name="login_registerInfo">Wenn sie noch keinen Account haben: Bitte auf der Gremo
+        Homepage registrieren: \"http://www.ma-gremo.de/\"
+    </string>
+    <string name="register">Registrieren</string>
+    <string name="errorMessage">Unglücklicherweise wurde die App beendet. Sorry!</string>
+    <string name="errorReport">Bericht</string>
+    <string name="errorCancle">Abbrechen</string>
+    <string name="errorTitle">Sorry!</string>
+    <string name="Data">Daten senden</string>
+    <string name="toggleButton_on">Stoppe Aktion</string>
+    <string name="toggleButton_off">Starte Aktion</string>
+    <string name="switch_bluetooth_sensor">Bluetooth Sensor benutzen</string>
+    <string name="your">Dein</string>
+    <string name="enableGps">Ortung ist ausgeschaltet. Möchtest du sie jetzt einschalten?</string>
+    <string name="atLeastOneLocError">Du brauchst mind. einen aktiven Ortungssensor.</string>
+    <string name="enableBluetoothError">Dein Bluetooth scheint ausgeschaltet zu sein, möchtest du es
+        jetzt anschalten?
+    </string>
+    <string name="bluetoothDisabledError">Bluetooth ist ausgeschaltet</string>
+
+
+    <!-- Settings -->
+    <string name="title_activity_settings">Einstellungen</string>
+    <string name="category_sensor">Benutze Sensoren</string>
+    <string name="title_switch_gps">GPS Ortung</string>
+    <string name="title_switch_net">Netzwerk Ortung</string>
+    <string name="title_switch_wifi">WLan Ortung</string>
+    <string name="title_switch_motion">Bewegungssensor</string>
+    <string name="title_switch_bluetooth">Bluetoothsensor</string>
+    <string name="category_sweepstake">Gewinnspiel</string>
+    <string name="join_sweepstake">Am Gewinnspiel teilnehmen</string>
+
+
+    <string name="sweepstakeMessage">Sie haben 5000 Punkte erreicht, sie können am Gewinnspiel
+        teilnehmen
+        und tolle Preise gewinnen. Gehe sie dazu auf die Gremo Homepage und tragen sie ihre Adresse
+        sein. Die Adressdaten werden unabhängig von ihren annonymen Fahrraddaten gespeichert. Wollen
+        sie auf die Gremo Homepage wechseln?
+    </string>
+    <string name="rememberSweepstakeLater">Später erinnern</string>
+    <string name="sweepstakeTitle">Gewinnspiel</string>
+    <string name="noSweepstakeMessage">Sie können leider erst ab 5000 Punkten am Gewinnspiel
+        teilnehmen.
+    </string>
+    <string name="ok">ok</string>
+    <string name="descriptionText">In den Einstellungen der App können Sie auswählen, welche
+        Sensoren genutzt werden sollen.
+        Bevor sie Radfahren oder Zu Fuß gehen, können sie mit \"Starte Aktion\" eine Aktion direkt
+        starten. Mit \"Stoppe Aktion\" kann die laufende Aktion am Ziel wieder beendet werde.
+        Mit Hilfe des \"Daten Senden\" Schalters, können Sie selbst bestimmen, ob Sie ihre Daten
+        live senden wollen, oder erst zu Hause im WLAN.
+        Die Anzahl der ungesendeten Nachrichten gibt an, wieviele Datensätze zur Zeit noch auf dem
+        Handy gespeichert sind und nicht versendet wurden.
+        Um die App zu beenden drücken Sie bitte den \"Zurück\"-Knopf Ihres Handys und bestätigen Sie
+        das Beenden der App.
+    </string>
+    <string name="button_delete_data">Daten löschen</string>
+    <string name="delete_data_mesage">Wollen Sie wirklich alle gesammelten, noch nicht gesendeten
+        Daten löschen? Dieser Vorgang kann nicht rückgängig gemacht werden!
+    </string>
+    <string name="descriptionTextLable">Anleitung:</string>
+    <string name="sensorTextLable">Erklärung der Sensoren:</string>
+    <string name="sensorLocationLable">GPS &#38; Netzwerk</string>
+    <string name="sensorWiFiLable">WLAN:</string>
+    <string name="sensorBluetoothLable">Bluetooth:</string>
+    <string name="sensorMotionLable">Bewegungssensor:</string>
+    <string name="sensorLocationText">Wird zur Positionsbestimmung benötigt um einen Track
+        aufzeichnen zu können.
+    </string>
+    <string name="sensorWiFiText">Wird benötigt um die Position zu bestimmen und zukünfige
+        Positionsbestimmung zu optimieren.
+    </string>
+    <string name="sensorBluetoothText">Wird benötigt um festzusellen wie viele andere
+        Verkehrsteilnehmer in der Nähe sind.
+    </string>
+    <string name="sensorMotionText">Wir benötigt um die Qualität der Straßen bzw. Radwegen zu
+        erfassen.
+    </string>
+
+
+</resources>

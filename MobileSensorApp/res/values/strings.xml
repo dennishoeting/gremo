@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Mobile Sensor App
+    </string>
+    <string name="action_settings">Settings
+    </string>
+
+    <!-- section headers -->
+
+    <string name="title_section1">WiFi Scanner</string>
+    <string name="title_section2">Create Sensor</string>
+
+
+    <!-- Sensor Strings -->
+    <string name="ScanButton">Scan wifi now</string>
+    <string name="bssid">bssid</string>
+    <string name="ssid">ssid</string>
+    <string name="HotspotSwitch">Toggle Hotspot</string>
+    <string name="BluetoothSwitch">Toogle Bluetooth</string>
+    <string name="service_name">SendDataService</string>
+    <string name="SensorName">Sensorname</string>
+    <string name="SensorSwitch">Sensor</string>
+    <string name="SensorMapMarker">Sensor Position</string>
+    <string name="SensingSwitch">Toggle Sending</string>
+    <string name="RefreshDBButton">Refresh</string>
+    <string name="WakeLockSwitch">Toggle WakeLock</string>
+    <string name="title_section3">Database</string>
+    <string name="DummyButton">Dummy</string>
+    <string name="LocationButton">Get current Position</string>
+    <string name="LocationSwitch">Continuous</string>
+    <string name="title_section0">Location</string>
+    <string name="WifiHotspot">Wifi Hotspot</string>
+    <string name="BluetoothSensor">Bluetooth Sensor</string>
+    <string name="SendAllButton">Send all Hotspots</string>
+    <string name="SaveDBButton">Save Database to SD</string>
+
+</resources>

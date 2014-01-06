@@ -1,0 +1,91 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/fragment_history"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MainActivity$HistoryFragment">
+
+    <!-- Header -->
+    <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true">
+
+        <Button
+                android:id="@+id/buttonRefreshProfile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/refreshProfile"/>
+
+        <TableRow>
+
+            <TextView
+                    android:id="@+id/points_allTime_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:height="@dimen/listview_horizontal_margin"
+                    android:text="@string/points_earned_alltime"
+                    android:textSize="15sp"
+                    android:width="150dp"/>
+
+            <TextView
+                    android:id="@+id/points_allTime_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:height="@dimen/listview_horizontal_margin"
+                    android:text="@string/points_earned_alltime_value"
+                    android:textSize="15sp"
+                    android:width="150dp"/>
+
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                    android:id="@+id/points_current_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:height="@dimen/listview_horizontal_margin"
+                    android:text="@string/points_current"
+                    android:textSize="15sp"
+                    android:width="150dp"/>
+
+            <TextView
+                    android:id="@+id/points_current_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:height="@dimen/listview_horizontal_margin"
+                    android:text="@string/points_current_value"
+                    android:textSize="15sp"
+                    android:width="150dp"/>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                    android:id="@+id/points_week_header"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:height="@dimen/listview_horizontal_margin"
+                    android:text="@string/points_earned_lastweek"
+                    android:textSize="15sp"
+                    android:width="150dp"/>
+
+            <TextView
+                    android:id="@+id/points_week_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:height="@dimen/listview_horizontal_margin"
+                    android:text="@string/points_earned_lastweek_value"
+                    android:textSize="15sp"
+                    android:width="150dp"/>
+        </TableRow>
+    </TableLayout>
+</ScrollView>

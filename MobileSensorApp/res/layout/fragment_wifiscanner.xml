@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/main"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <!-- style="?android:attr/buttonBarStyle" -->
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <!-- style="?android:attr/buttonBarButtonStyle" -->
+        <Button
+                android:id="@+id/switchWiFiScanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/ScanButton"/>
+
+        <Button
+                android:id="@+id/switchSendAll"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/SendAllButton"/>
+
+
+    </LinearLayout>
+
+    <!-- Header -->
+
+    <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+        <TextView
+                android:id="@+id/headerItem1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_horizontal"
+                android:height="@dimen/listview_horizontal_margin"
+                android:text="@string/ssid"
+                android:textSize="20sp"
+                android:width="175dp"/>
+
+        <TextView
+                android:id="@+id/headerItem2"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:gravity="center_horizontal"
+                android:height="@dimen/listview_horizontal_margin"
+                android:text="@string/bssid"
+                android:textSize="20sp"
+                android:width="175dp"/>
+
+    </LinearLayout>
+
+    <!-- List Divider -->
+
+    <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dip"
+            android:background="?android:attr/listDivider"/>
+
+    <!-- ListView (grid_items) -->
+
+    <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent">
+
+        <ListView
+                android:id="@+id/listViewBluetooth"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+        </ListView>
+    </LinearLayout>
+
+</LinearLayout>
