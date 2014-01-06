@@ -1,0 +1,32 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 16:37
+   To change this template use File | Settings | File Templates.
+
+div
+    #historyScroll.block(when-scrolled='getActions()')
+        gm-button(ng-click='refreshActions()') Erneuern
+        dl.table-hover(ng-repeat='actionDate in actionDates')
+            dt {{actionDate.date|date:'dd.MM.yyyy'}}
+            dd(ng-repeat='action in actionDate.actions')
+                span.navbar-link(ng-click='actionClick(action)')
+                    i.icon-plus(ng-hide='action.expanded')
+                    i.icon-minus(ng-show='action.expanded')
+                    i {{action.time|date:'HH:mm'}} Uhr : {{action.value|number:2}} {{action.unit}},
+                    abbr(title='Punkte pro Meter: {{action.exchangeratio}}') {{action.actiontypename}}
+                    i.icon-arrow-right
+                    | {{action.pointsearned|number:0}}
+                    i.icon-leaf
+                p(ng-show='busy && action.expanded')
+                    i.icon-fire
+                    i Loading ...
+                ul.unstyled(ng-show='action.expanded')
+                    li(ng-repeat='gps in action.gpsdata')
+                        i.icon-hand-right.margin-left-small
+                        | {{gps.position}}
+        hr
+        a(href='#', ng-click='getActions()') mehr
+    #historyMapContainer
+        #historyMap(style='border: 1px solid black; height: 100%; width: 100%;')

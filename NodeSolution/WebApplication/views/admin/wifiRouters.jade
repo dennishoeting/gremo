@@ -1,0 +1,54 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 13:43
+   To change this template use File | Settings | File Templates.
+.topMargin
+    .controls
+        gm-button(ng-click='refreshView()')
+            i.icon-refresh.wide
+            | Erneuern
+    h1.contentTitle Wifi-Router
+    .overviewColumn
+        div(ng-show="selectedRouter==undefined")
+            i Selektiere einen Router
+        div(ng-show="selectedRouter!=undefined")
+            label Details
+            table
+                tr
+                    td: b ID:
+                    td {{selectedRouter.id}}
+                tr
+                    td: b BSSID:
+                    td {{selectedRouter.routerid}}
+                tr
+                    td: b SSID:
+                    td {{selectedRouter.ssid}}
+                tr
+                    td: b Typ:
+                    td {{selectedRouter.typeid}}
+                tr
+                    td: b Aktiv:
+                    td
+                        span(ng-show="selectedRouter.isactive") Ja
+                        span(ng-hide="selectedRouter.isactive") Nein
+                tr
+                    td: b Punkte je Scan:
+                    td {{selectedRouter.pointsperdetection}}
+                tr
+                    td: b Locationupdates:
+                    td {{selectedRouter.locationupdates}}
+                tr(colspan="2")
+                    td: label Position
+                tr
+                    td: b Stadt (PLZ):
+                    td {{selectedRouter.address.city}} ({{selectedRouter.address.postcode}})
+                tr
+                    td: b Straße:
+                    td  {{selectedRouter.address.road}} {{selectedRouter.address.house_number}}
+    .contentColumn
+        label(ng-show="wifiRouters.length<1000") Anzahl: {{wifiRouters.length}}
+        label(ng-show="wifiRouters.length>=1000") Anzahl: > {{maxRouters}}
+        .content.mapContent
+            #wifiRouterMap(style='border: 1px solid black; height: 100%; width: 100%;')

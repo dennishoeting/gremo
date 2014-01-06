@@ -1,0 +1,23 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+form
+    .modal-header
+        h1 Induktionsschleifendaten importieren
+    .modal-body
+        .block
+            h1 Datenvorbereitung
+            p >TEXT<
+        .block
+            h1 Datei hochladen
+            input#file_input.hide(type="file", accept=".csv")
+            span(ng-click='chooseFile()')
+                label(for="chosenFile") Datei:
+                input(type="text", ng-model="filePath")
+                p.help-block Akzeptierte Formate: *.csv
+    .modal-footer
+        gm-button(ng-disabled="filePath==undefined || filePath==''", ng-click='upload()') Datei hochladen
+        gm-button(ng-click='close()') Abbrechen

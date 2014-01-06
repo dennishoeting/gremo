@@ -1,0 +1,27 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+.modal-header
+    h1 Track hochladen
+.modal-body
+    .block
+        h1 Typ des Tracks
+        p
+            input(type="radio", name="track_type", value="3", ng-model="actionType")
+            span Fahrrad fahren
+        p
+            input(type="radio", name="track_type", value="2", ng-model="actionType")
+            span Zu Fu&szlig; gehen
+    .block
+        h1 Datei-Upload
+        input#file_input.hide(type="file", accept=".kml")
+        span(ng-click='chooseFile()')
+            label(for="chosenFile") Datei:
+            input(type="text", ng-model="filePath")
+            p.help-block Akzeptierte Formate: *.kml
+.modal-footer
+    gm-button(ng-click='upload()') Hochladen
+    gm-button(ng-click='close()') Verwerfen

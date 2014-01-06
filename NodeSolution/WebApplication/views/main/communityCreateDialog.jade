@@ -1,0 +1,31 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+form
+    .modal-header
+        h1 Gruppe erstellen
+    .modal-body
+            .block
+                label
+                    | Name:
+                    i.wide
+                input.input-large(ng-model='communityCredentials.name', type='text', required)
+            .block
+                label
+                    | Typ:
+                    i.wide
+                select(ng-model='chosenTypeId', required)
+                    option(ng-repeat='commType in communityTypes', value='{{commType.id}}') {{commType.name}}
+            .block
+                label Beschreibung:
+                textarea.input-xlarge(ng-model='communityCredentials.description', type='text', rows='5')
+            .block
+                h5
+                    input(ng-model='communityCredentials.open', type='checkbox')
+                    span.wide Offene Gruppe
+    .modal-footer
+        gm-button(ng-click='close(communityCredentials)', type='submit') Bestätigen
+        gm-button(ng-click='close(null)') Abbrechen

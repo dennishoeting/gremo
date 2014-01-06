@@ -1,0 +1,46 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 04.06.13
+   Time: 13:32
+   To change this template use File | Settings | File Templates.
+#main
+    div.content
+        p.
+            Wypas cheesecake gummi bears gingerbread gummi bears chupa chups sweet biscuit. Chupa chups cake candy canestart.
+            Marshmallow marshmallow bonbon pie pie bonbon. Chocolate cake tiramisu sweet roll bear clawmarshmallow ice cream gingerbread.
+            Biscuit brownie donut icing halvah. Jelly-o chocolate wafer chupa chupstiramisu lemon drops jujubes sweet. Marzipan pie
+            gummies fruitcake bonbon pie. Marshmallow faworki macaroonice cream. Gummi bears gummi bears apple pie wypas
+            fruitcake jelly caramels. Pastry gummi bears donut donutcaramels jujubes applicake lollipop cotton candy.
+        p.
+            Wypas cheesecake gummi bears gingerbread gummi bears chupa chups sweet biscuit. Chupa chups cake candy canestart.
+            Marshmallow marshmallow bonbon pie pie bonbon. Chocolate cake tiramisu sweet roll bear clawmarshmallow ice cream gingerbread.
+            Biscuit brownie donut icing halvah. Jelly-o chocolate wafer chupa chupstiramisu lemon drops jujubes sweet. Marzipan pie
+            gummies fruitcake bonbon pie. Marshmallow faworki macaroonice cream. Gummi bears gummi bears apple pie wypas
+            fruitcake jelly caramels. Pastry gummi bears donut donutcaramels jujubes applicake lollipop cotton candy.
+        p.
+            Wypas cheesecake gummi bears gingerbread gummi bears chupa chups sweet biscuit. Chupa chups cake candy canestart.
+            Marshmallow marshmallow bonbon pie pie bonbon. Chocolate cake tiramisu sweet roll bear clawmarshmallow ice cream gingerbread.
+            Biscuit brownie donut icing halvah. Jelly-o chocolate wafer chupa chupstiramisu lemon drops jujubes sweet. Marzipan pie
+            gummies fruitcake bonbon pie. Marshmallow faworki macaroonice cream. Gummi bears gummi bears apple pie wypas
+            fruitcake jelly caramels. Pastry gummi bears donut donutcaramels jujubes applicake lollipop cotton candy.
+    aside
+        form(method='post', action='/login')
+            h1 Login
+            p: input.large(name='username', placeholder='username', type='text', requiered)
+            p: input.large(placeholder='password', type='password', required, ng-model='loginData.uncryptPass')
+            p
+                input(type='text', ng-show, name='password', ng-model='loginData.cryptPass')
+                input(type='text', ng-show, name='dest', ng-model='loginData.dest')
+                gm-button.large(type='submit') Einloggen
+                br
+                a(href='#', ng-click='forgotPassword()') Password vergessen
+        div oder
+        form(method='post', action='/register')
+            h1 Register
+            p: input.large(name='email', placeholder='email', type='email', required, ng-model='regData.email')
+            p: input.large(placeholder='password', type='password', required, ng-model='regData.password')
+            p: input.large(placeholder='confirm password', type='password', required, ng-model='regData.password2')
+            p
+                input(type='text', ng-show, name='password', ng-model='regData.cryptPass')
+                gm-button.large(type='submit', ng-disabled='!validate()') Register

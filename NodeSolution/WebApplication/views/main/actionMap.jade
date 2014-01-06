@@ -1,0 +1,72 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 16:37
+   To change this template use File | Settings | File Templates.
+
+div
+    include actionControls
+    h1.contentTitle Aktivitäten
+    include actionList
+    .contentColumn
+        ul.nav.nav-tabs
+            li.actionNav(ng-click='routeToOverview()')
+                a.black: i.icon-arrow-left
+            li.actionNav.active(ng-click='routeToMap(currentId)'): a.black Karte
+            li.actionNav(ng-click='routeToStats(currentId)'): a.black Statistiken
+        .content.mapContent
+            #historyMap(style='border: 1px solid black; height: 100%; width: 100%;')
+        .mapDiv.mapSliderDiv
+            div.left
+                gm-button(ng-click="previousPoint()"): i.icon-circle-arrow-left
+            div.center
+                .mapSlider(map-slider, event="actionLoaded", model="currentSelection")
+            div.right
+                gm-button(ng-click="nextPoint()"): i.icon-circle-arrow-right
+        .mapDiv.mapKeyDiv
+            ul.unstyled
+                li
+                    input(type="checkbox", ng-model="checkGps")
+                    span.wide GPS-Punkte
+                    img.wide(src="./../img/design/gps.png")
+                li
+                    input(type="checkbox", ng-model="checkNet")
+                    span.wide Net-Punkte
+                    img.wide(src="./../img/design/net.png")
+                li
+                    input(type="checkbox", ng-model="checkWifi")
+                    span.wide Wifi-Punkte
+                    img.wide(src="./../img/design/wifi.png")
+                li
+                    input(type="checkbox", ng-model="checkBluetooth")
+                    span.wide Bluetooth-Punkte
+                    img.wide(src="./../img/design/bluetooth.png")
+                li
+                    input(type="checkbox", ng-model="checkMotion")
+                    span.wide Motion-Punkte
+                    img.wide(src="./../img/design/motion.png")
+        .mapDiv.mapInfoDiv
+            div: i [{{currentSelection+1}}/{{currentAction.dataLength}}]
+            div(ng-switch="currentData.type")
+                div(ng-switch-when="gps")
+                    div
+                        | Positionierung durch
+                        span(ng-show="currentData.providerid==2") <b>GPS</b>
+                        span(ng-show="currentData.providerid==3") <b>Netzwerke</b>
+                        span(ng-hide="currentData.providerid==2 || currentData.providerid==3") <b>Upload</b>
+                    div Zeit: {{currentData.timestamp | date:'medium'}}
+                    div Geschwindigkeit: {{currentData.speed*3.6 | number:2}} km/h
+                div(ng-switch-when="wifi")
+                    div Positionierung durch <b>Wifi</b>
+                    div Zeit: {{currentData.timestamp | date:'medium'}}
+                    div Router-Name: {{currentData.ssid}}
+                div(ng-switch-when="bluetooth")
+                    div Positionierung durch <b>Bluetooth</b>
+                    div Zeit: {{currentData.timestamp | date:'medium'}}
+                div(ng-switch-when="motion")
+                    div Gyro-Sensor-Ausschlag
+                    div Zeit: {{currentData.timestamp | date:'medium'}}
+                    div X: {{currentData.x | number:2}}
+                    div Y: {{currentData.y | number:2}}
+                    div Z: {{currentData.z | number:2}}

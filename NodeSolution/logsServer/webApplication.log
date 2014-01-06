@@ -1,0 +1,421 @@
+[2013-07-14 15:30:56.266] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-14 15:30:56.267] [INFO] webApplication.js - Web socket initialized
+[2013-07-14 15:30:56.269] [INFO] webApplication.js - Web application started.
+[2013-07-14 15:30:56.269] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-14 15:30:58.444] [INFO] webApplication.js - Stopping web application.
+[2013-07-14 15:31:02.492] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-14 15:31:02.493] [INFO] webApplication.js - Web socket initialized
+[2013-07-14 15:31:02.495] [INFO] webApplication.js - Web application started.
+[2013-07-14 15:31:12.394] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-14 15:31:12.395] [INFO] webApplication.js - Web socket initialized
+[2013-07-14 15:31:12.397] [INFO] webApplication.js - Web application started.
+[2013-07-14 15:31:12.397] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-15 07:06:53.436] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-15 07:06:53.438] [INFO] webApplication.js - Web socket initialized
+[2013-07-15 07:06:53.440] [INFO] webApplication.js - Web application started.
+[2013-07-15 07:06:53.440] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-15 07:26:31.043] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-15 07:26:31.045] [INFO] webApplication.js - Web socket initialized
+[2013-07-15 07:26:31.047] [INFO] webApplication.js - Web application started.
+[2013-07-15 07:26:31.047] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-15 07:45:25.083] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-15 07:45:25.085] [INFO] webApplication.js - Web socket initialized
+[2013-07-15 07:45:25.087] [INFO] webApplication.js - Web application started.
+[2013-07-15 07:45:25.087] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-15 07:46:42.836] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-15 07:46:42.838] [INFO] webApplication.js - Web socket initialized
+[2013-07-15 07:46:42.839] [INFO] webApplication.js - Web application started.
+[2013-07-15 07:46:42.840] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-15 07:50:37.747] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-15 07:50:37.749] [INFO] webApplication.js - Web socket initialized
+[2013-07-15 07:50:37.750] [INFO] webApplication.js - Web application started.
+[2013-07-15 07:50:37.751] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-15 08:16:39.197] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-15 08:16:39.205] [INFO] webApplication.js - Web socket initialized
+[2013-07-15 08:16:39.208] [INFO] webApplication.js - Web application started.
+[2013-07-15 08:16:39.214] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-15 08:16:42.837] [INFO] webApplication.js - Stopping web application.
+[2013-07-15 08:21:32.709] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-15 08:21:32.710] [INFO] webApplication.js - Web socket initialized
+[2013-07-15 08:21:32.712] [INFO] webApplication.js - Web application started.
+[2013-07-15 08:21:32.713] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-15 09:34:56.720] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-15 09:34:56.738] [INFO] webApplication.js - Web socket initialized
+[2013-07-15 09:34:56.747] [INFO] webApplication.js - Web application started.
+[2013-07-15 09:34:56.756] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-15 10:49:49.396] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-15 10:49:49.397] [INFO] webApplication.js - Web socket initialized
+[2013-07-15 10:49:49.399] [INFO] webApplication.js - Web application started.
+[2013-07-15 10:49:49.399] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-15 10:56:54.420] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-15 10:56:54.433] [INFO] webApplication.js - Web socket initialized
+[2013-07-15 10:56:54.436] [INFO] webApplication.js - Web application started.
+[2013-07-15 10:56:54.439] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-15 12:06:34.048] [INFO] webApplication.js - Stopping web application.
+[2013-07-15 19:55:03.458] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-15 19:55:03.476] [INFO] webApplication.js - Web socket initialized
+[2013-07-15 19:55:03.479] [INFO] webApplication.js - Web application started.
+[2013-07-15 19:55:03.482] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-16 13:01:19.550] [INFO] webApplication.js - Stopping web application.
+[2013-07-16 13:33:21.071] [INFO] webApplication.js - Stopping web application.
+[2013-07-16 13:50:44.688] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-16 13:50:44.694] [INFO] webApplication.js - Web socket initialized
+[2013-07-16 13:50:44.698] [INFO] webApplication.js - Web application started.
+[2013-07-16 13:50:44.701] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-16 15:58:29.279] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-16 15:58:29.313] [INFO] webApplication.js - Web socket initialized
+[2013-07-16 15:58:29.317] [INFO] webApplication.js - Web application started.
+[2013-07-16 15:58:29.321] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-16 17:35:57.833] [INFO] webApplication.js - Stopping web application.
+[2013-07-16 21:04:09.236] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-16 21:04:09.255] [INFO] webApplication.js - Web socket initialized
+[2013-07-16 21:04:09.258] [INFO] webApplication.js - Web application started.
+[2013-07-16 21:04:09.261] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-17 10:12:09.500] [INFO] webApplication.js - Stopping web application.
+[2013-07-17 10:12:09.574] [INFO] webApplication.js - Stopping web application.
+[2013-07-17 10:28:21.456] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-17 10:28:21.457] [INFO] webApplication.js - Web socket initialized
+[2013-07-17 10:28:21.460] [INFO] webApplication.js - Web application started.
+[2013-07-17 10:28:21.460] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-17 10:28:39.337] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-17 10:28:39.348] [INFO] webApplication.js - Web socket initialized
+[2013-07-17 10:28:39.351] [INFO] webApplication.js - Web application started.
+[2013-07-17 10:28:39.354] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-17 10:35:03.343] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-17 10:35:03.586] [INFO] webApplication.js - Web socket initialized
+[2013-07-17 10:35:03.590] [INFO] webApplication.js - Web application started.
+[2013-07-17 10:35:03.596] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-25 12:49:38.023] [INFO] webApplication.js - Stopping web application.
+[2013-07-25 12:56:25.831] [INFO] webApplication.js - Stopping web application.
+[2013-07-25 12:56:30.042] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-25 12:56:30.052] [INFO] webApplication.js - Web socket initialized
+[2013-07-25 12:56:30.074] [INFO] webApplication.js - Web application started.
+[2013-07-25 12:56:46.892] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-25 12:56:46.903] [INFO] webApplication.js - Web socket initialized
+[2013-07-25 12:56:46.905] [INFO] webApplication.js - Web application started.
+[2013-07-25 12:56:46.908] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-26 18:49:45.073] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-26 18:49:45.084] [INFO] webApplication.js - Web socket initialized
+[2013-07-26 18:49:45.100] [INFO] webApplication.js - Web application started.
+[2013-07-26 18:49:45.103] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-27 12:17:46.608] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-27 12:17:46.643] [INFO] webApplication.js - Web socket initialized
+[2013-07-27 12:17:46.659] [INFO] webApplication.js - Web application started.
+[2013-07-27 12:17:46.662] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-29 16:20:34.005] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-29 16:20:34.068] [INFO] webApplication.js - Web socket initialized
+[2013-07-29 16:20:34.087] [INFO] webApplication.js - Web application started.
+[2013-07-29 16:20:34.112] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-07-29 18:24:01.321] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-07-29 18:24:01.332] [INFO] webApplication.js - Web socket initialized
+[2013-07-29 18:24:01.335] [INFO] webApplication.js - Web application started.
+[2013-07-29 18:24:01.337] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-05 13:56:37.333] [INFO] webApplication.js - smtpCtrl.js:  null
+[2013-08-05 15:39:14.983] [INFO] webApplication.js - Stopping web application.
+[2013-08-06 08:32:06.075] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-06 08:32:06.133] [INFO] webApplication.js - Web socket initialized
+[2013-08-06 08:32:06.159] [INFO] webApplication.js - Web application started.
+[2013-08-06 08:32:06.180] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-06 10:55:12.265] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-06 10:55:12.279] [INFO] webApplication.js - Web socket initialized
+[2013-08-06 10:55:12.282] [INFO] webApplication.js - Web application started.
+[2013-08-06 10:55:12.285] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-06 12:00:19.993] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-06 12:00:20.004] [INFO] webApplication.js - Web socket initialized
+[2013-08-06 12:00:20.015] [INFO] webApplication.js - Web application started.
+[2013-08-06 12:00:20.017] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-06 14:26:12.691] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-06 14:26:12.702] [INFO] webApplication.js - Web socket initialized
+[2013-08-06 14:26:12.706] [INFO] webApplication.js - Web application started.
+[2013-08-06 14:26:12.708] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-06 16:11:13.840] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-06 16:11:13.851] [INFO] webApplication.js - Web socket initialized
+[2013-08-06 16:11:13.855] [INFO] webApplication.js - Web application started.
+[2013-08-06 16:11:13.857] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-07 08:07:13.735] [INFO] webApplication.js - smtpCtrl.js:  null
+[2013-08-07 08:24:46.574] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-07 08:24:46.576] [INFO] webApplication.js - Web socket initialized
+[2013-08-07 08:24:46.598] [INFO] webApplication.js - Web application started.
+[2013-08-07 08:24:46.599] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-07 08:24:56.651] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-07 08:24:56.664] [INFO] webApplication.js - Web socket initialized
+[2013-08-07 08:24:56.667] [INFO] webApplication.js - Web application started.
+[2013-08-07 08:24:56.671] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-07 08:25:30.669] [INFO] webApplication.js - smtpCtrl.js:  null
+[2013-08-07 08:25:39.360] [INFO] webApplication.js - smtpCtrl.js:  null
+[2013-08-07 16:07:50.060] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-07 16:07:50.072] [INFO] webApplication.js - Web socket initialized
+[2013-08-07 16:07:50.075] [INFO] webApplication.js - Web application started.
+[2013-08-07 16:07:50.078] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-07 16:11:53.854] [INFO] webApplication.js - Stopping web application.
+[2013-08-07 16:23:58.616] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-07 16:23:58.625] [INFO] webApplication.js - Web socket initialized
+[2013-08-07 16:23:58.628] [INFO] webApplication.js - Web application started.
+[2013-08-07 16:23:58.630] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-07 17:15:17.313] [INFO] webApplication.js - Stopping web application.
+[2013-08-07 18:25:44.753] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-07 18:25:44.754] [INFO] webApplication.js - Web socket initialized
+[2013-08-07 18:25:44.756] [INFO] webApplication.js - Web application started.
+[2013-08-07 18:25:44.757] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-07 18:29:58.300] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-07 18:29:58.311] [INFO] webApplication.js - Web socket initialized
+[2013-08-07 18:29:58.321] [INFO] webApplication.js - Web application started.
+[2013-08-07 18:29:58.324] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-08 14:02:57.637] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-08 14:02:57.667] [INFO] webApplication.js - Web socket initialized
+[2013-08-08 14:02:57.685] [INFO] webApplication.js - Web application started.
+[2013-08-08 14:02:57.688] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-08 14:08:39.167] [INFO] webApplication.js - Stopping web application.
+[2013-08-08 14:27:42.891] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-08 14:27:42.904] [INFO] webApplication.js - Web socket initialized
+[2013-08-08 14:27:42.908] [INFO] webApplication.js - Web application started.
+[2013-08-08 14:27:42.911] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-08 14:58:50.285] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-08 14:58:50.294] [INFO] webApplication.js - Web socket initialized
+[2013-08-08 14:58:50.297] [INFO] webApplication.js - Web application started.
+[2013-08-08 14:58:50.299] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-08 15:00:27.629] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-08 15:00:27.636] [INFO] webApplication.js - Web socket initialized
+[2013-08-08 15:00:27.640] [INFO] webApplication.js - Web application started.
+[2013-08-08 15:00:27.643] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-08 15:29:14.160] [INFO] webApplication.js - Stopping web application.
+[2013-08-08 16:30:34.317] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-08 16:30:34.336] [INFO] webApplication.js - Web socket initialized
+[2013-08-08 16:30:34.340] [INFO] webApplication.js - Web application started.
+[2013-08-08 16:30:34.343] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-08 17:07:08.277] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-08 17:07:08.290] [INFO] webApplication.js - Web socket initialized
+[2013-08-08 17:07:08.294] [INFO] webApplication.js - Web application started.
+[2013-08-08 17:07:08.297] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-08 17:07:39.267] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-08 17:07:39.279] [INFO] webApplication.js - Web socket initialized
+[2013-08-08 17:07:39.282] [INFO] webApplication.js - Web application started.
+[2013-08-08 17:07:39.284] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-08 17:24:40.247] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-08 17:24:40.258] [INFO] webApplication.js - Web socket initialized
+[2013-08-08 17:24:40.267] [INFO] webApplication.js - Web application started.
+[2013-08-08 17:24:40.270] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-08 17:29:00.856] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-08 17:29:00.868] [INFO] webApplication.js - Web socket initialized
+[2013-08-08 17:29:00.878] [INFO] webApplication.js - Web application started.
+[2013-08-08 17:29:00.881] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-08 20:16:45.882] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-08 20:16:45.892] [INFO] webApplication.js - Web socket initialized
+[2013-08-08 20:16:45.895] [INFO] webApplication.js - Web application started.
+[2013-08-08 20:16:45.898] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-09 09:33:18.328] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-09 09:33:18.353] [INFO] webApplication.js - Web socket initialized
+[2013-08-09 09:33:18.356] [INFO] webApplication.js - Web application started.
+[2013-08-09 09:33:18.359] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-09 09:40:59.935] [INFO] webApplication.js - Stopping web application.
+[2013-08-09 09:41:39.654] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-09 09:41:39.667] [INFO] webApplication.js - Web socket initialized
+[2013-08-09 09:41:39.676] [INFO] webApplication.js - Web application started.
+[2013-08-09 09:41:39.688] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-09 17:30:28.474] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-09 17:30:28.487] [INFO] webApplication.js - Web socket initialized
+[2013-08-09 17:30:28.490] [INFO] webApplication.js - Web application started.
+[2013-08-09 17:30:28.493] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-11 18:15:59.534] [INFO] webApplication.js - smtpCtrl.js:  null
+[2013-08-12 09:02:13.613] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-12 09:03:44.819] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-12 09:10:59.865] [INFO] webApplication.js - smtpCtrl.js:  null
+[2013-08-12 11:34:19.806] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-12 11:34:19.819] [INFO] webApplication.js - Web socket initialized
+[2013-08-12 11:34:19.831] [INFO] webApplication.js - Web application started.
+[2013-08-12 11:34:19.834] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-12 11:35:35.550] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-12 12:15:40.696] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-12 12:15:40.708] [INFO] webApplication.js - Web socket initialized
+[2013-08-12 12:15:40.711] [INFO] webApplication.js - Web application started.
+[2013-08-12 12:15:40.714] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-12 14:00:52.885] [INFO] webApplication.js - Stopping web application.
+[2013-08-12 14:09:02.132] [INFO] webApplication.js - Stopping web application.
+[2013-08-12 14:44:26.689] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-12 14:44:26.700] [INFO] webApplication.js - Web socket initialized
+[2013-08-12 14:44:26.703] [INFO] webApplication.js - Web application started.
+[2013-08-12 14:44:26.706] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-12 19:45:41.103] [INFO] webApplication.js - Stopping web application.
+[2013-08-12 21:50:45.337] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-12 21:50:45.349] [INFO] webApplication.js - Web socket initialized
+[2013-08-12 21:50:45.358] [INFO] webApplication.js - Web application started.
+[2013-08-12 21:50:45.360] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-13 10:13:57.397] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-13 11:05:18.904] [INFO] webApplication.js - Stopping web application.
+[2013-08-13 11:52:38.181] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-13 11:52:38.193] [INFO] webApplication.js - Web socket initialized
+[2013-08-13 11:52:38.216] [INFO] webApplication.js - Web application started.
+[2013-08-13 11:52:38.234] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-13 22:54:37.148] [INFO] webApplication.js - Stopping web application.
+[2013-08-14 09:43:48.716] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-14 09:43:48.727] [INFO] webApplication.js - Web socket initialized
+[2013-08-14 09:43:48.766] [INFO] webApplication.js - Web application started.
+[2013-08-14 09:43:48.779] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-14 10:48:14.914] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-14 10:48:14.915] [INFO] webApplication.js - Web socket initialized
+[2013-08-14 10:48:14.917] [INFO] webApplication.js - Web application started.
+[2013-08-14 10:48:14.918] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-14 10:48:22.724] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-14 10:48:22.735] [INFO] webApplication.js - Web socket initialized
+[2013-08-14 10:48:22.738] [INFO] webApplication.js - Web application started.
+[2013-08-14 10:48:22.740] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-14 17:18:18.850] [INFO] webApplication.js - Stopping web application.
+[2013-08-14 18:55:32.475] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-14 18:55:32.490] [INFO] webApplication.js - Web socket initialized
+[2013-08-14 18:55:32.499] [INFO] webApplication.js - Web application started.
+[2013-08-14 18:55:32.502] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-14 22:20:32.161] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-14 22:20:32.172] [INFO] webApplication.js - Web socket initialized
+[2013-08-14 22:20:32.175] [INFO] webApplication.js - Web application started.
+[2013-08-14 22:20:32.178] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-15 08:34:10.910] [INFO] webApplication.js - Stopping web application.
+[2013-08-15 09:00:15.597] [INFO] webApplication.js - Stopping web application.
+[2013-08-15 09:00:39.653] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-15 09:00:39.659] [INFO] webApplication.js - Web socket initialized
+[2013-08-15 09:00:39.677] [INFO] webApplication.js - Web application started.
+[2013-08-15 09:00:39.680] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-15 09:03:01.007] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-15 09:03:01.033] [INFO] webApplication.js - Web socket initialized
+[2013-08-15 09:03:01.037] [INFO] webApplication.js - Web application started.
+[2013-08-15 09:03:01.045] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-15 09:06:04.617] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-15 09:06:04.627] [INFO] webApplication.js - Web socket initialized
+[2013-08-15 09:06:04.631] [INFO] webApplication.js - Web application started.
+[2013-08-15 09:06:04.634] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-15 09:06:42.440] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-15 09:24:30.834] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-15 09:30:42.144] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-15 13:04:03.102] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-15 13:04:08.331] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-15 13:04:33.442] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-15 14:59:43.026] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-15 15:00:15.503] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-15 15:02:27.550] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-15 17:06:53.665] [INFO] webApplication.js - Stopping web application.
+[2013-08-15 17:19:54.123] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-15 17:19:54.128] [INFO] webApplication.js - Web socket initialized
+[2013-08-15 17:19:54.131] [INFO] webApplication.js - Web application started.
+[2013-08-15 17:19:54.134] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-16 07:59:43.710] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-16 08:01:02.971] [INFO] webApplication.js - bootstrap.js:  'eMail sent'
+[2013-08-16 08:53:43.119] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-16 08:54:16.326] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-16 08:54:45.180] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-16 08:54:45.186] [INFO] webApplication.js - Web socket initialized
+[2013-08-16 08:54:45.204] [INFO] webApplication.js - Web application started.
+[2013-08-16 08:54:45.229] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-16 08:56:30.112] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-16 08:56:30.114] [INFO] webApplication.js - Web socket initialized
+[2013-08-16 08:56:30.116] [INFO] webApplication.js - Web application started.
+[2013-08-16 08:56:30.116] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-16 08:57:48.459] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-16 08:57:48.460] [INFO] webApplication.js - Web socket initialized
+[2013-08-16 08:57:48.462] [INFO] webApplication.js - Web application started.
+[2013-08-16 08:57:48.463] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-16 08:58:39.152] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-16 08:58:39.154] [INFO] webApplication.js - Web socket initialized
+[2013-08-16 08:58:39.155] [INFO] webApplication.js - Web application started.
+[2013-08-16 08:58:39.156] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-16 09:00:26.553] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-16 09:00:26.579] [INFO] webApplication.js - Web socket initialized
+[2013-08-16 09:00:26.583] [INFO] webApplication.js - Web application started.
+[2013-08-16 09:00:26.591] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-16 09:00:39.222] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-16 09:00:47.036] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-16 12:17:43.657] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-16 12:17:43.664] [INFO] webApplication.js - Web socket initialized
+[2013-08-16 12:17:43.668] [INFO] webApplication.js - Web application started.
+[2013-08-16 12:17:43.671] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-16 12:26:49.919] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-16 12:26:49.926] [INFO] webApplication.js - Web socket initialized
+[2013-08-16 12:26:49.929] [INFO] webApplication.js - Web application started.
+[2013-08-16 12:26:49.933] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-16 12:41:43.410] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-16 12:41:43.421] [INFO] webApplication.js - Web socket initialized
+[2013-08-16 12:41:43.424] [INFO] webApplication.js - Web application started.
+[2013-08-16 12:41:43.426] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-16 12:50:03.508] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-16 16:26:40.057] [INFO] webApplication.js - Stopping web application.
+[2013-08-16 17:01:55.048] [INFO] webApplication.js - Stopping web application.
+[2013-08-16 17:05:05.588] [INFO] webApplication.js - Stopping web application.
+[2013-08-16 17:30:02.495] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-16 17:30:02.510] [INFO] webApplication.js - Web socket initialized
+[2013-08-16 17:30:02.513] [INFO] webApplication.js - Web application started.
+[2013-08-16 17:30:02.515] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-16 20:08:08.112] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-16 20:08:46.048] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-16 20:08:51.690] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-19 08:18:21.850] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-19 12:05:34.041] [INFO] webApplication.js - Stopping web application.
+[2013-08-19 14:35:12.385] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-19 14:35:12.444] [INFO] webApplication.js - Web socket initialized
+[2013-08-19 14:35:12.453] [INFO] webApplication.js - Web application started.
+[2013-08-19 14:35:12.456] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-19 14:37:39.299] [INFO] webApplication.js - smtpCtrl.js:  null
+[2013-08-19 18:04:10.054] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-19 18:04:10.067] [INFO] webApplication.js - Web socket initialized
+[2013-08-19 18:04:10.077] [INFO] webApplication.js - Web application started.
+[2013-08-19 18:04:10.079] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-19 18:06:28.096] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-19 18:06:28.102] [INFO] webApplication.js - Web socket initialized
+[2013-08-19 18:06:28.105] [INFO] webApplication.js - Web application started.
+[2013-08-19 18:06:28.108] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-19 19:31:51.725] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-19 23:55:07.465] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-19 23:55:07.471] [INFO] webApplication.js - Web socket initialized
+[2013-08-19 23:55:07.475] [INFO] webApplication.js - Web application started.
+[2013-08-19 23:55:07.478] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-20 08:11:16.989] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 08:11:24.520] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 10:58:27.449] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 11:04:53.554] [INFO] webApplication.js - smtpCtrl.js:  null
+[2013-08-20 11:09:43.495] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 11:15:04.843] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 11:20:17.413] [INFO] webApplication.js - bootstrap.js:  'eMail sent'
+[2013-08-20 11:48:23.585] [INFO] webApplication.js - Stopping web application.
+[2013-08-20 11:50:48.951] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-20 11:50:48.957] [INFO] webApplication.js - Web socket initialized
+[2013-08-20 11:50:48.961] [INFO] webApplication.js - Web application started.
+[2013-08-20 11:50:48.964] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-20 12:29:31.763] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 12:30:06.316] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 12:31:57.647] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 12:32:19.499] [INFO] webApplication.js - Stopping web application.
+[2013-08-20 12:40:15.833] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-20 12:40:15.871] [INFO] webApplication.js - Web socket initialized
+[2013-08-20 12:40:15.874] [INFO] webApplication.js - Web application started.
+[2013-08-20 12:40:15.898] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-20 12:57:49.531] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 12:59:15.560] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-20 12:59:37.476] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 12:59:54.349] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 13:00:42.561] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 13:07:35.077] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-20 13:07:35.092] [INFO] webApplication.js - Web socket initialized
+[2013-08-20 13:07:35.096] [INFO] webApplication.js - Web application started.
+[2013-08-20 13:07:35.099] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-20 13:07:46.987] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-20 13:07:47.001] [INFO] webApplication.js - Web socket initialized
+[2013-08-20 13:07:47.004] [INFO] webApplication.js - Web application started.
+[2013-08-20 13:07:47.007] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-20 13:10:48.702] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 13:16:18.823] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-20 13:16:18.860] [INFO] webApplication.js - Web socket initialized
+[2013-08-20 13:16:18.863] [INFO] webApplication.js - Web application started.
+[2013-08-20 13:16:18.870] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-20 13:28:53.711] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-20 13:28:53.742] [INFO] webApplication.js - Web socket initialized
+[2013-08-20 13:28:53.745] [INFO] webApplication.js - Web application started.
+[2013-08-20 13:28:53.753] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-20 16:28:58.116] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 17:12:08.198] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 17:12:58.205] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 17:16:50.909] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 17:17:15.027] [INFO] webApplication.js - Stopping web application.
+[2013-08-20 17:22:56.195] [INFO] webApplication.js - Web socket connection established. I am client.
+[2013-08-20 17:22:56.221] [INFO] webApplication.js - Web socket initialized
+[2013-08-20 17:22:56.224] [INFO] webApplication.js - Web application started.
+[2013-08-20 17:22:56.232] [INFO] webApplication.js - HTTP server for web socket ready.
+[2013-08-20 17:23:15.601] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 17:23:39.778] [INFO] webApplication.js - webSocketHdl.js: client hdl
+[2013-08-20 17:23:52.785] [INFO] webApplication.js - Stopping web application.

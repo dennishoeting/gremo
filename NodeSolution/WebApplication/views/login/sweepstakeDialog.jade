@@ -1,0 +1,40 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+.modal-header
+    h1
+        i.wide.icon-star
+        | Gewinnspiel
+.modal-body
+    p Herzlichen Glückwunsch, Du kannst jetzt an der Verlosung des Android Smart Phones teilnehmen. Bitte gib Deine E-Mail-Adresse, sowie Name und Adresse an, um in den Lostopf zu kommen.
+    table
+        tr
+            td
+                label(for='email') E-Mail
+            td
+                input#email(ng-model='credentials.email', type='email', required)
+        tr
+            td(colspan="2")
+                hr
+        tr
+            td
+                label(for='name') Vollständiger Name:
+            td
+                input#name(ng-model='credentials.name', type='text', required)
+        tr
+            td
+                label(for='postcode') Postleitzahl und Ort:
+            td
+                input#postcode(ng-model='credentials.postcode', type='text', required)
+        tr
+            td
+                label(for='address') Straße und Hausnummer:
+            td
+                input#address(ng-model='credentials.address', type='text', required)
+.modal-footer
+    gm-button(ng-click='send()') Abschicken
+    gm-button(ng-show='loggedIn()',ng-click='never()') Nein, danke
+    gm-button(ng-click='close()') Nicht jetzt

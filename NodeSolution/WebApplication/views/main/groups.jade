@@ -1,0 +1,38 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 16:36
+   To change this template use File | Settings | File Templates.
+
+
+.topMargin
+    .controls
+        gm-button(ng-click='refreshView()')
+            i.icon-refresh.wide
+            | Erneuern
+    h1.contentTitle Gruppe
+    .block
+        h1 Meine Gruppen
+        table
+            tr(ng-show='ng-show', communities.length='communities.length')
+            tr(ng-repeat='community in model.communities')
+                td.larger
+                    a.black(ng-click='routeToCommunity(community.id)', title='{{community.name}}')
+                        abbr(title='Beitritt noch nicht bestätigt.'): i.icon-exclamation-sign.wide(ng-hide='community.confirmed')
+                        | {{community.name|cut:30:'...'}}
+                    span.wide
+                        | ({{community.points + ' '}}
+                        i.icon-leaf
+                        | )
+                    a.wider(ng-click='leaveCommunity(community.id)', title='Gruppe verlassen')
+                        i.icon-remove
+    .block
+        h1 Gruppen suchen
+        form.form-search
+            .input-append
+                input.span2.search-query(type='text', placeholder='Gruppe suchen', ng-model='pattern')
+                button.btn(ng-click='searchForCommunity(pattern)', ng-disabled='!pattern.length||pattern.length<3', pattern.length='pattern.length') Los!
+    .block
+        h1 Eigene Gruppe gründen
+        gm-button.larger(ng-click='createCommunity()') Eigene Gruppe gründen

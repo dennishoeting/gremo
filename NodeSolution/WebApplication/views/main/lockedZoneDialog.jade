@@ -1,0 +1,39 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+.modal-header
+    h1 Unsichtbare Zonen
+.modal-body
+    .dialogLeft
+        p Hier kannst Du Zonen definieren, in denen Du unsichtbar bist.
+        form.form-search
+            .input-append
+                input.span2.search-query(type='text', placeholder='Zonenname', ng-model='zonenname', ng-disabled="mode==modes.creation")
+                button.btn(
+                ng-show="mode==modes.modification",
+                ng-click="activateDraw()",
+                ng-disabled='!zonenname.length||zonenname.length<1') Erstellen
+                button.btn(
+                ng-show="mode==modes.creation",
+                ng-click="deactivateDraw()",
+                ng-disabled='!zonenname.length||zonenname.length<1') Verwerfen
+        hr
+        :markdown
+            Wähle einen Namen, klicke auf *Erstellen* und dann auf die Karte rechts, um eine neue anonymisierte Zone anzulegen.
+            Durch Klicken setzt du die Eckpunkte der Zone. Ein Doppelklick vollendet die Zone.
+            Klicke auf bestehende Zonen, um sie zu markieren. Jetzt kannst Du sie modifizieren oder löschen.
+        p: b Selektierte Zone:
+        table
+            tr(ng-hide="selectedFeatures.length>0")
+                td(colspan="3"): i Keine Zone selektiert
+            tr(ng-repeat="feature in selectedFeatures")
+                td.fullWidth {{feature.id|cut:false:20:'...'}}
+                td {{feature.area|number:2}}&nbspm&sup2;
+                td: a.wide(href="#", ng-click="delete(feature)") Löschen
+    .dialogRight.bordered
+        #lockedZoneMap(style='height: 100%; width: 100%;')
+.modal-footer
+    gm-button(ng-click='close()') Schließen

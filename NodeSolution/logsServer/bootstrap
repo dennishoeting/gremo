@@ -1,0 +1,189 @@
+05.07M.2013
+05.07M.2013
+05.07M.2013
+-2013-07-05 11:34:45.442.log
+-2013-07-05 11:34:45.486.log
+-2013-07-05 11:34:45.489.log
+[2013-07-05 11:36:46.621] [INFO] bootstrap.js - Main server start success
+[2013-07-05 11:36:46.666] [INFO] bootstrap.js - Web server start success
+[2013-07-05 11:36:46.669] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-05 12:23:10.158] [INFO] bootstrap.js - Main server start success
+[2013-07-05 12:23:10.201] [INFO] bootstrap.js - Web server start success
+[2013-07-05 12:23:10.204] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-05 16:57:25.471] [INFO] bootstrap.js - UNCAUGHT EXCEPTION! { [Error: read ECONNRESET] code: 'ECONNRESET', errno: 'ECONNRESET', syscall: 'read' }
+Error: read ECONNRESET
+    at errnoException (net.js:878:11)
+    at TCP.onread (net.js:539:19)
+[2013-07-05 16:57:25.472] [INFO] bootstrap.js - Main server start failure.
+[2013-07-05 16:57:25.477] [INFO] bootstrap.js - -- All components stopped successfully
+[2013-07-05 16:57:25.477] [INFO] bootstrap.js - ## RESTARTING!
+[2013-07-05 16:57:25.487] [INFO] bootstrap.js - Main server start success
+[2013-07-05 18:45:21.684] [INFO] bootstrap.js - Main server start success
+[2013-07-05 18:45:21.729] [INFO] bootstrap.js - Web server start success
+[2013-07-05 18:45:21.731] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-05 19:28:46.675] [INFO] bootstrap.js - Main server start success
+[2013-07-05 19:28:46.720] [INFO] bootstrap.js - Web server start success
+[2013-07-05 19:28:46.723] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-05 22:54:29.068] [INFO] bootstrap.js - Main server start success
+[2013-07-05 22:54:29.113] [INFO] bootstrap.js - Web server start success
+[2013-07-05 22:54:29.116] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-06 22:06:30.615] [INFO] bootstrap.js - UNCAUGHT EXCEPTION! { [Error: read ETIMEDOUT] code: 'ETIMEDOUT', errno: 'ETIMEDOUT', syscall: 'read' }
+Error: read ETIMEDOUT
+    at errnoException (net.js:878:11)
+    at TCP.onread (net.js:539:19)
+[2013-07-06 22:06:30.616] [INFO] bootstrap.js - Main server start failure.
+[2013-07-06 22:06:30.621] [INFO] bootstrap.js - -- All components stopped successfully
+[2013-07-06 22:06:30.621] [INFO] bootstrap.js - ## RESTARTING!
+[2013-07-06 22:06:30.631] [INFO] bootstrap.js - Main server start success
+[2013-07-07 17:23:32.725] [INFO] bootstrap.js - Main server start success
+[2013-07-07 17:23:32.866] [INFO] bootstrap.js - Web server start success
+[2013-07-07 17:23:32.872] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-08 10:33:39.913] [INFO] bootstrap.js - UNCAUGHT EXCEPTION! { [error: terminating connection due to administrator command]
+  length: 109,
+  name: 'error',
+  severity: 'FATAL',
+  code: '57P01',
+  detail: undefined,
+  hint: undefined,
+  position: undefined,
+  internalPosition: undefined,
+  internalQuery: undefined,
+  where: undefined,
+  file: 'postgres.c',
+  line: '2855',
+  routine: 'ProcessInterrupts' }
+error: terminating connection due to administrator command
+    at Connection.parseE (/disk/duemmer/mirr0/proj/misc/maronk/apps/node_modules/pg/lib/connection.js:537:11)
+    at Connection.parseMessage (/disk/duemmer/mirr0/proj/misc/maronk/apps/node_modules/pg/lib/connection.js:382:17)
+    at Socket.<anonymous> (/disk/duemmer/mirr0/proj/misc/maronk/apps/node_modules/pg/lib/connection.js:97:20)
+    at Socket.EventEmitter.emit (events.js:95:17)
+    at Socket.<anonymous> (_stream_readable.js:710:14)
+    at Socket.EventEmitter.emit (events.js:92:17)
+    at emitReadable_ (_stream_readable.js:382:10)
+    at emitReadable (_stream_readable.js:378:5)
+    at readableAddChunk (_stream_readable.js:143:7)
+    at Socket.Readable.push (_stream_readable.js:113:10)
+[2013-07-08 10:33:39.915] [INFO] bootstrap.js - Main server start failure.
+[2013-07-08 10:33:39.919] [INFO] bootstrap.js - -- All components stopped successfully
+[2013-07-08 10:33:39.919] [INFO] bootstrap.js - ## RESTARTING!
+[2013-07-08 10:33:39.925] [INFO] bootstrap.js - Main server start success
+[2013-07-08 12:09:34.604] [INFO] bootstrap.js - Main server start success
+[2013-07-08 12:09:34.729] [INFO] bootstrap.js - Web server start success
+[2013-07-08 12:09:34.732] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-08 12:24:56.718] [INFO] bootstrap.js - Main server start success
+[2013-07-08 12:24:56.762] [INFO] bootstrap.js - Web server start success
+[2013-07-08 12:24:56.765] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-08 12:29:04.798] [INFO] bootstrap.js - Main server start success
+[2013-07-08 12:29:04.842] [INFO] bootstrap.js - Web server start success
+[2013-07-08 12:29:04.845] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-08 13:06:58.419] [INFO] bootstrap.js - UNCAUGHT EXCEPTION! { [Error: read ECONNRESET] code: 'ECONNRESET', errno: 'ECONNRESET', syscall: 'read' }
+Error: read ECONNRESET
+    at errnoException (net.js:878:11)
+    at TCP.onread (net.js:539:19)
+[2013-07-08 13:06:58.420] [INFO] bootstrap.js - Main server start failure.
+[2013-07-08 13:06:58.423] [INFO] bootstrap.js - UNCAUGHT EXCEPTION! { [Error: write EPIPE] code: 'EPIPE', errno: 'EPIPE', syscall: 'write' }
+Error: write EPIPE
+    at errnoException (net.js:878:11)
+    at Object.afterWrite (net.js:695:19)
+[2013-07-08 13:06:58.424] [INFO] bootstrap.js - Main server start failure.
+[2013-07-08 13:06:58.425] [INFO] bootstrap.js - -- All components stopped successfully
+[2013-07-08 13:06:58.425] [INFO] bootstrap.js - ## RESTARTING!
+[2013-07-08 13:06:58.430] [INFO] bootstrap.js - -- All components stopped successfully
+[2013-07-08 13:06:58.430] [INFO] bootstrap.js - ## RESTARTING!
+[2013-07-08 13:06:58.438] [INFO] bootstrap.js - Main server start success
+[2013-07-08 13:07:04.436] [INFO] bootstrap.js - Main server start success
+[2013-07-08 15:20:49.634] [INFO] bootstrap.js - Main server start success
+[2013-07-08 15:20:49.679] [INFO] bootstrap.js - Web server start success
+[2013-07-08 15:20:49.682] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-08 18:02:10.020] [INFO] bootstrap.js - UNCAUGHT EXCEPTION! { [Error: read ETIMEDOUT] code: 'ETIMEDOUT', errno: 'ETIMEDOUT', syscall: 'read' }
+Error: read ETIMEDOUT
+    at errnoException (net.js:878:11)
+    at TCP.onread (net.js:539:19)
+[2013-07-08 18:02:10.022] [INFO] bootstrap.js - Main server start failure.
+[2013-07-08 18:02:10.026] [INFO] bootstrap.js - -- All components stopped successfully
+[2013-07-08 18:02:10.026] [INFO] bootstrap.js - ## RESTARTING!
+[2013-07-08 18:02:10.034] [INFO] bootstrap.js - Main server start success
+[2013-07-09 08:51:38.071] [INFO] bootstrap.js - Main server start success
+[2013-07-09 08:51:38.200] [INFO] bootstrap.js - Web server start success
+[2013-07-09 08:51:38.203] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-09 09:31:33.738] [INFO] bootstrap.js - Main server start success
+[2013-07-09 09:31:33.782] [INFO] bootstrap.js - Web server start success
+[2013-07-09 09:31:33.787] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-09 09:31:36.627] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-09 10:57:37.331] [INFO] bootstrap.js - Main server start success
+[2013-07-09 10:57:37.378] [INFO] bootstrap.js - Web server start success
+[2013-07-09 10:57:37.381] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-09 10:57:39.456] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-09 10:58:39.219] [INFO] bootstrap.js - Main server start success
+[2013-07-09 10:58:39.267] [INFO] bootstrap.js - Web server start success
+[2013-07-09 10:58:39.270] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-09 10:58:41.055] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-09 18:27:15.103] [INFO] bootstrap.js - UNCAUGHT EXCEPTION! { [Error: read ECONNRESET] code: 'ECONNRESET', errno: 'ECONNRESET', syscall: 'read' }
+Error: read ECONNRESET
+    at errnoException (net.js:878:11)
+    at TCP.onread (net.js:539:19)
+[2013-07-09 18:27:15.103] [INFO] bootstrap.js - Main server start failure.
+[2013-07-09 18:27:17.309] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-09 18:27:47.425] [INFO] bootstrap.js - -- All components stopped successfully
+[2013-07-09 18:27:47.425] [INFO] bootstrap.js - ## RESTARTING!
+[2013-07-09 18:27:47.436] [INFO] bootstrap.js - Main server start success
+[2013-07-09 18:27:49.388] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-10 08:30:28.311] [INFO] bootstrap.js - UNCAUGHT EXCEPTION! { [Error: read ECONNRESET] code: 'ECONNRESET', errno: 'ECONNRESET', syscall: 'read' }
+Error: read ECONNRESET
+    at errnoException (net.js:878:11)
+    at TCP.onread (net.js:539:19)
+[2013-07-10 08:30:28.312] [INFO] bootstrap.js - Main server start failure.
+[2013-07-10 08:30:30.917] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-10 08:32:27.509] [INFO] bootstrap.js - -- All components stopped successfully
+[2013-07-10 08:32:27.509] [INFO] bootstrap.js - ## RESTARTING!
+[2013-07-10 08:32:27.517] [INFO] bootstrap.js - Main server start success
+[2013-07-10 08:32:29.622] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-10 08:35:39.462] [INFO] bootstrap.js - Main server start success
+[2013-07-10 08:35:39.584] [INFO] bootstrap.js - Web server start success
+[2013-07-10 08:35:39.587] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-10 08:35:41.722] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-10 11:24:05.566] [INFO] bootstrap.js - Main server start success
+[2013-07-10 11:24:05.613] [INFO] bootstrap.js - Web server start success
+[2013-07-10 11:24:05.616] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-10 11:24:08.327] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-10 12:10:05.260] [INFO] bootstrap.js - UNCAUGHT EXCEPTION! { [Error: listen EADDRINUSE] code: 'EADDRINUSE', errno: 'EADDRINUSE', syscall: 'listen' }
+Error: listen EADDRINUSE
+    at errnoException (net.js:878:11)
+    at Server._listen2 (net.js:1016:14)
+    at listen (net.js:1038:10)
+    at Server.listen (net.js:1104:5)
+    at telnetAppender (/disk/duemmer/mirr0/proj/misc/maronk/apps/node_modules/log4js/lib/appenders/telnet.js:51:8)
+    at Object.configure (/disk/duemmer/mirr0/proj/misc/maronk/apps/node_modules/log4js/lib/appenders/telnet.js:75:12)
+    at /disk/duemmer/mirr0/proj/misc/maronk/apps/node_modules/log4js/lib/log4js.js:148:59
+    at Array.forEach (native)
+    at configureAppenders (/disk/duemmer/mirr0/proj/misc/maronk/apps/node_modules/log4js/lib/log4js.js:144:22)
+    at configureOnceOff (/disk/duemmer/mirr0/proj/misc/maronk/apps/node_modules/log4js/lib/log4js.js:196:13)
+[2013-07-10 12:10:05.261] [INFO] bootstrap.js - Main server start failure.
+[2013-07-10 12:10:05.266] [INFO] bootstrap.js - -- All components stopped successfully
+[2013-07-10 12:10:05.266] [INFO] bootstrap.js - ## RESTARTING!
+[2013-07-10 12:10:07.490] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-10 12:10:08.876] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-10 12:10:09.271] [INFO] bootstrap.js - Main server start success
+[2013-07-10 12:10:09.308] [INFO] bootstrap.js - Web server start success
+[2013-07-10 12:10:09.311] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-10 12:10:10.285] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-10 15:23:15.359] [INFO] bootstrap.js - Main server start success
+[2013-07-10 15:23:15.407] [INFO] bootstrap.js - Web server start success
+[2013-07-10 15:23:15.410] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-10 15:23:17.867] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-12 17:01:16.299] [INFO] bootstrap.js - Main server start success
+[2013-07-12 17:01:16.435] [INFO] bootstrap.js - Web server start success
+[2013-07-12 17:01:16.444] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-12 17:01:19.465] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-13 15:33:49.204] [INFO] bootstrap.js - Main server start success
+[2013-07-13 15:33:49.333] [INFO] bootstrap.js - Web server start success
+[2013-07-13 15:33:49.336] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-13 15:33:51.740] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-13 15:35:42.053] [INFO] bootstrap.js - Main server start success
+[2013-07-13 15:35:42.102] [INFO] bootstrap.js - Web server start success
+[2013-07-13 15:35:42.105] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-13 15:35:44.279] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'
+[2013-07-13 15:37:36.609] [INFO] bootstrap.js - Main server start success
+[2013-07-13 15:37:36.657] [INFO] bootstrap.js - Web server start success
+[2013-07-13 15:37:36.660] [INFO] bootstrap.js - -- All components started successfully!
+[2013-07-13 15:37:39.020] [INFO] bootstrap.js - bootstrap.js:  'eMail sent'

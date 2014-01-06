@@ -1,0 +1,38 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 16:37
+   To change this template use File | Settings | File Templates.
+.topMargin
+    .controls
+        gm-button(ng-click='refreshView()')
+            i.icon-refresh.wide
+            | Erneuern
+    h1.contentTitle Statistik
+    .block
+        h1 Bestenliste (Nutzer)
+        table.table
+            tr
+                th #
+                th Name
+                th Punktzahl
+            tr.navbar-link(ng-repeat='entry in model.leaderboard', ng-click='routeToUser(entry.id)')
+                td {{entry.rank}}
+                td {{(entry.nickname || entry.email)|cut:false:15:'...' }}
+                td {{entry.points}}
+                    i.icon-leaf
+    .block
+        h1 Bestenliste (Gruppen)
+        table.table
+            tr
+                th #
+                th Name
+                th Größe
+                th Punktzahl
+            tr.navbar-link(ng-repeat='entry in model.groupLeaderboard', ng-click='routeToCommunity(entry.id)')
+                td {{entry.rank}}
+                td {{(entry.name)|cut:false:15:'...' }}
+                td {{entry.usercount}}
+                td {{entry.points}}
+                    i.icon-leaf

@@ -1,0 +1,44 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+form
+    .modal-header
+        h1
+            i.wide.icon-question-sign
+            | FAQ - Häufig gestellte Fragen
+    .modal-body
+        .block
+            h1 Wann sollte ich eine Aktion starten?
+            p.
+                Wenn Du Dich auf dein Fahrrad schwingst und los fährst, solltest Du auch in der Gremo-App eine Aktion starten. Wenn Du natürlich erst zu einem späteren Zeitpunkt getrackt werden möchtest, kannst Du auch später damit beginnen.
+                In den Einstellungen deines Gremo-Accounts kannst Du unsichtbare Zonen anlegen, in denen Du nicht getrackt wirst.
+                Sobald Du am Ziel angekommen bist, kannst Du die Aktion beenden.<br />
+                Beachte, dass die Aktion erst dann in der Web-App eingetragen ist, wenn alle Nachrichten von der Gremo-App gesendet wurden!
+        .block
+            h1 Warum verbraucht die App so viel Strom?
+            p.
+                Du hast mit der Gremo-App die Möglichkeit, sehr viele verschiedene Sensoren in Deinem Smart Phone anzusprechen.
+                Natürlich braucht Dein Smart Phone mehr Strom, je mehr Sensoren aktiv sind. In den Einstellungen der App kannst Du Sensoren an- und ausschalten.
+                Je mehr Sensoren aktiv sind, desto mehr Punkte bekommst du. Je weniger Sensoren aktiv sind, desto weniger Strom wird verbraucht.
+        .block
+            h1 Entstehen durch die Nutzung der der Gremo-App irgendwelche Kosten?
+            p.
+                Nein, grundsätzlich nicht. Die Gremo-App ist kostenfrei und es entstehen auch keine direkten Kosten.
+                Beachte jedoch, dass das Senden der Daten zu Datenverkehr führt, der - abhängig von Deinem Mobilfunkvertrag - eventuell Kosten verursachen kann!
+                Über den "Senden"-Schalter in der App kannst Du bestimmen, wann die Daten gesendet werden. Wenn Du auf Nummer Sicher gehen willst, warte bis du in einem WLAN bist, bis Du die Daten sendest.
+        .block
+            h1 Wofür werden die verschiedenen Sensoren benötigt?
+            p.
+                Die Net- und GPS-Sensoren nutzen wir zur Positionierung Deines Smart Phones.
+                WLAN sichtet WLAN-Netzwerke in Deiner Umgebung und kann so indirekt auch zur Positionierung beitragen.
+                Mindestens einen der drei genannten Sensoren musst Du einschalten, um sinnvoll einen Track aufzuzeichnen.
+                Bluetooth kann auch der Positionierung dienen, ist aber vor allem zur Abschätzung der \"Verkehrsdichte\" in Deinem Umkreis konzipiert. Alle gesammelten Daten werden natürlich pseudonomisiert gespeichert.
+                Der Motion-Sensor misst die Beschleunigungswerte Deines Smart Phones und soll so Aufschlüsse über die Straßenqualität liefern.
+        .block
+            i.wide.icon-info-sign
+            b: i Wenn Du weitere Fragen hast, nimm gern Kontakt mit uns auf (unten rechts) oder schreib Feedback (oben rechts)!
+    .modal-footer
+        gm-button(ng-click='close()') Schließen

@@ -1,0 +1,21 @@
+.createInductionloopDialog {
+    height: 500px;
+    width: 700px;
+}
+
+.createInductionloopDialog .modal-body {
+    height: 350px;
+}
+
+div.track{
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #000;
+    background-color: #9DD454;
+    color: black;
+}
+
+div.track.active {
+    background-color: #83AF46;
+    color: black;
+}

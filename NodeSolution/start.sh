@@ -1,0 +1,1 @@
+NODE_ENV=development nohup node bootstrap.js &

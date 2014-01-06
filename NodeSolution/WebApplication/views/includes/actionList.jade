@@ -1,0 +1,25 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 01.06.13
+   Time: 14:24
+   To change this template use File | Settings | File Templates.
+
+#actionList.block(ng-controller='ActionListCtrl', when-scrolled='getActions()')
+    gm-button(ng-click='refreshActions()')
+        i.icon-refresh.wide
+        | Erneuern
+    .actionDay(ng-repeat='actionDate in model.actionDates')
+        span {{actionDate.date|date:'dd.MM.yyyy'}}
+        .action(ng-repeat='action in actionDate.actions',
+                ng-click='routeToAction(action.id)',
+                class='actiontype-{{action.actiontype}}',
+                ng-class='{active: currentId == action.id}')
+            i.wide.icon-plus(ng-hide='action.expanded')
+            {{action.actiontypename}}
+            i.wide.icon-arrow-right
+            | {{action.pointsearned|number:0}}
+            i.wide.icon-leaf
+    hr
+    .pagination-centered
+        a(href='#', ng-click='getActions()') mehr

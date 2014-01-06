@@ -1,0 +1,52 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 13:42
+   To change this template use File | Settings | File Templates.
+div
+    .controls
+        gm-button(ng-click='refreshView()') Erneuern
+    div
+        table.fullWidth
+            caption Online users
+            tr
+                td: b #
+                td: b ID:
+                td: b Code:
+                td: b Type:
+            tr(ng-show='onlineUsers.length<1')
+                td(colspan='4'): i Keine Nutzer online.
+            tr(ng-repeat='user in onlineUsers')
+                td {{$index}}
+                td {{user.id}}
+                td {{user.code}}
+                td {{user.type}}
+    hr
+    div
+        table.fullWidth
+            caption User in Datenbank
+            tr
+                th ID:
+                th Email:
+                th Vorname:
+                th Nachname:
+                th Nickname:
+                th Member Seit:
+                th Geburtsjahr:
+                th Postleitzahl:
+                th Anschrift:
+                th Points:
+            tr(ng-hide='ng-hide', dbusers.length='dbUsers.length')
+                td(colspan='10'): i Keine Nutzer in Datenbank.
+            tr(ng-repeat='user in dbUsers')
+                td {{user.id}}
+                td {{user.email}}
+                td {{user.firstname}}
+                td {{user.lastname}}
+                td {{user.nickname}}
+                td {{user.membersince}}
+                td {{user.birthyear}}
+                td {{user.zipcode}}
+                td {{user.postaddress}}
+                td {{user.points}}

@@ -1,0 +1,121 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 16:37
+   To change this template use File | Settings | File Templates.
+
+#profile.topMargin
+    .controls
+        gm-button(ng-click='saveProfileData()', ng-disabled='!profileDataHasChanged()')
+            i.icon-ok
+            | Speichern
+        gm-button(ng-click='maintainProfileData()', ng-disabled='!profileDataHasChanged()')
+            i.icon-remove
+            | Verwerfen
+    h1.contentTitle Einstellungen
+    .block
+        h1 Accountbezogene Einstellungen
+        table.form(ng-init='pwCollapsed=true')
+            tr
+                td Mitglied seit:
+                td {{model.self.membersince|date:'dd.MM.yyyy'}}
+            tr
+                td
+                    label(for='email') E-Mail:
+                td
+                    input.normal#email(ng-model='changedUser.email', type='email', readonly='readonly')
+            tr
+                td
+                    label(for='password') Password:
+                td
+                    input.normal#password(ng-model='changedUser.password', type='password', ng-readonly='pwCollapsed')
+            tr
+                td
+                td(colspan='2')
+                    gm-button(ng-click='openChangePasswordDialog()') Passwort ändern
+    .block
+        h1 Persönliche Einstellungen (optional)
+        table.form
+            tr
+                td
+                    label(for='nickname') Nickname:
+                td
+                    input.normal#nickname(ng-model='changedUser.nickname', type='text')
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.nickname != changedUser.nickname')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.nickname != changedUser.nickname')
+            tr
+                td
+                    label(for='firstname') Vorname:
+                td
+                    input.normal#firstname(ng-model='changedUser.firstname', type='text')
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.firstname != changedUser.firstname')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.firstname != changedUser.firstname')
+            tr
+                td
+                    label(for='lastname') Nachname:
+                td
+                    input.normal#lastname(ng-model='changedUser.lastname', type='text')
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.lastname != changedUser.lastname')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.lastname != changedUser.lastname')
+            tr
+                td
+                    label(for='birthyear') Geburtsjahr:
+                td
+                    input.normal#birthyear(ng-model='changedUser.birthyear', type='number', min='1900', max='thisYear')
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.birthyear != changedUser.birthyear')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.birthyear != changedUser.birthyear')
+    .block
+        h1 Zusätzliche Einstellungen
+        p.
+            Die Treibstoff-Einstellungen kannst du nutzen, <br />
+            um die Berechnung deiner Treibstoffersparnis <br />
+            zu optimieren.
+        hr
+        table.form
+            tr
+                td
+                    label(for='fueltype') Treibstoffart:
+                td
+                    select.normal#fueltypelist(ng-model='changedUser.consumptiontype')
+                        option(ng-repeat="fueltype in fueltypes") {{fueltype.name}}
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.consumptiontype != changedUser.consumptiontype')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.consumptiontype != changedUser.consumptiontype')
+                tr
+                    td
+                        label(for='avgconsumption') &#216; Verbrauch
+                    td
+                        input.normal(type='number', ng-model='changedUser.consumption')
+                        abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.consumption != changedUser.consumption')
+                        abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.consumption != changedUser.consumption')
+            //tr
+                td(colspan="2")
+                    input(type="checkbox", ng-model="checkAddress", ng-disabled='true')
+                    b.wide Adresse angeben
+            //tr
+                td
+                    label(for='zipcode') Postleitzahl:
+                td
+                    input#zipcode(ng-model='changedUser.zipcode', type='number', ng-disabled="!checkAddress")
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.zipcode != changedUser.zipcode')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.zipcode != changedUser.zipcode')
+            //tr
+                td
+                    label(for='postaddress') Anschrift:
+                td
+                    input#postaddress(ng-model='changedUser.postaddress', type='text', ng-disabled="!checkAddress")
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.postaddress != changedUser.postaddress')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.postaddress != changedUser.postaddress')
+
+    .block.large
+        h1 Unsichtbare Zonen
+        p Hier kannst Du Zonen abstecken, in denen keine Daten von Dir gespeichert werden, selbst wenn du trackst.
+        gm-button(ng-click="openLockedZoneDialog()") Unsichtbare Zonen
+    .block.large
+        h1 Datenverwaltung
+        p Hier kannst Du Deine gesammelten Daten löschen oder anonymisieren.
+        gm-button(ng-click="openDataDialog()") Datenverwaltung
+    .block.large
+        h1 Account löschen
+        p Klicke hier, um deinen Gremo-Account zu löschen.
+        gm-button(ng-click="deleteAccount()") Account löschen.

@@ -1,0 +1,67 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 13:25
+   To change this template use File | Settings | File Templates.
+!!!5
+html(ng-app='adminApp')
+    head
+        include includes/styles
+        link(rel="stylesheet", href="css/adminStyle.css")
+        link(rel="stylesheet", href="lib/ui-bootstrap/bootstrap-datepicker.css")
+        link(rel="stylesheet", href="lib/ui-bootstrap/bootstrap-timepicker.css")
+
+        script(src='lib/jquery/jquery.min.js')
+        script(src='lib/ui-bootstrap/bootstrap.min.js')
+        !{adminlibjs}
+        script(src='lib/angular/angular-locale_de-de.js')
+        script(src='lib/moment/moment.min.js')
+        script(src='lib/ui-bootstrap/bootstrap-datepicker.js')
+        script(src='lib/ui-bootstrap/bootstrap-timepicker.js')
+        script(src='lib/angular-strap/angular-strap.min.js')
+        script(src='lib/showdown/showdown.js')
+        script(src='lib/underscore/underscore-min.js')
+        script(src='socket.io/socket.io.js') // virtual
+
+        !{sharedjs}
+        !{adminjs}
+
+    body(ng-controller='AdminCtrl')
+        #leaf
+        div(modal='loadingStatus<1', options="modalOpts")
+            .loadingModal
+                h1 Lade Daten ...
+                p Bitte warten
+        #events: gm-alert(ng-repeat='alert in alerts', type='alert.type', close='closeAlert($index)') {{alert.msg}}
+        header: h1 Admin@Gremo
+        nav
+            ul.inline
+                li: a.white(href='/admin')
+                    i.wide.icon-heart
+                    | Status
+                li: a.white(href='/interfaces')
+                    i.wide.icon-book
+                    | Schnittstellen
+                li: a.white(href='/users')
+                    i.wide.icon-user
+                    | Nutzer
+                li: a.white(href='/communities')
+                    i.wide.icon-globe
+                    | Gruppen
+                li: a.white(href='/tracks')
+                    i.wide.icon-road
+                    | Tracks
+                li: a.white(href='/inductionLoops')
+                    i.wide.icon-map-marker
+                    | Inductionsschleifen
+                li: a.white(href='/bluetoothSensors')
+                    i.wide.icon-map-marker
+                    | Bluetooth Sensoren
+                li: a.white(href='/wifiRouters')
+                    i.wide.icon-map-marker
+                    | Wifi Router
+                //li: a.white(href='/motion')
+                    i.wide.icon-map-marker
+                    | Motion
+        div(ng-view)#view

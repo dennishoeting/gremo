@@ -1,0 +1,62 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 16:37
+   To change this template use File | Settings | File Templates.
+
+div
+    include actionControls
+    h1.contentTitle Aktivitäten
+    include actionList
+    .contentColumn
+        .topMargin
+            .block
+                h1 Rang
+                table.form
+                    tr
+                        td: b Punkte
+                        td {{user.points}}
+                    tr
+                        td: b Rang
+                        td {{user.rank}}
+                    tr
+                        td: b Beitritt
+                        td {{user.membersince|date:'dd.MM.yy'}}
+
+            .block
+                h1 Gesamtaktivität
+                table.form
+                    tr
+                        td: b Anzahl Aktivitäten
+                        td {{total.actionCount}}
+                    tr
+                        td: b Entfernung
+                        td {{total.distance | number:2}} m
+                    tr
+                        td: b Entfernung je Aktivität
+                        td {{total.distance / total.actionCount | number:2}} m
+                    tr
+                        td
+                            abbr(title="Bei {{fuelPrice[user.consumptiontype]}} Euro je Liter und {{user.consumption}} Liter auf 100km ({{user.consumptiontype}})")
+                                i.icon-info-sign.wide
+                            b Benzin Gespart
+                        td {{total.distance / 1000 * user.consumption * fuelPrice[user.consumptiontype] / 100 | number:2}} &euro;
+            .block
+                h1 Aktivität der letzten Woche
+                table.form
+                    tr
+                        td: b Anzahl Aktivitäten
+                        td {{lastweek.actionCount}}
+                    tr
+                        td: b Entfernung
+                        td {{lastweek.distance | number:2}} m
+                    tr
+                        td: b Entfernung je Aktivität
+                        td {{lastweek.distance / lastweek.actionCount | number:2}} m
+                    tr
+                        td
+                            abbr(title="Bei {{fuelPrice[user.consumptiontype]}} Euro je Liter und {{user.consumption}} Liter auf 100km ({{user.consumptiontype}})")
+                                i.icon-info-sign.wide
+                            b Benzin Gespart
+                        td {{lastweek.distance / 1000 * user.consumption * fuelPrice[user.consumptiontype] / 100 | number:2}} &euro;

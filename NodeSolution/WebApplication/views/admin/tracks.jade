@@ -1,0 +1,121 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 13:42
+   To change this template use File | Settings | File Templates.
+
+div
+    .controls
+        gm-button(ng-click='refreshView()')
+            i.icon-refresh.wide
+            | Erneuern
+    h1.contentTitle Tracks
+    .overviewColumn
+        label(ng-click="collapseQuery=!collapseQuery")
+            i.icon-circle-arrow-right(ng-show="collapseQuery")
+            i.icon-circle-arrow-down(ng-hide="collapseQuery")
+            span.wide Abfrageformulierung
+
+        div(ng-hide="collapseQuery")
+            gm-button(ng-disabled="queryType.absolute", ng-click="setAbsolute()") Absolut
+            gm-button(ng-disabled="queryType.interval", ng-click="setInterval()") Tag
+            gm-button(ng-disabled="queryType.weekday", ng-click="setWeekday()") Wochentag
+            div(ng-show="queryType.absolute")
+                label Start
+                div
+                    input.small(type="text", ng-model="timeframe.startDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                    span.wide :
+                    input.small(type="text", ng-model="timeframe.startTime", bs-timepicker)
+                label Ende
+                div
+                    input.small(type="text", ng-model="timeframe.endDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                    span.wide :
+                    input.small(type="text", ng-model="timeframe.endTime", bs-timepicker)
+            div(ng-show="queryType.interval")
+                label Vom __ bis zum __
+                div
+                    input.small(type="text", ng-model="timeframe.startDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                    span.wide -
+                    input.small(type="text", ng-model="timeframe.endDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                label jeweils von __ bis __
+                div
+                    input.small(type="text", ng-model="timeframe.startInterval", bs-timepicker)
+                    span.wide -
+                    input.small(type="text", ng-model="timeframe.endInterval", bs-timepicker)
+            div(ng-show="queryType.weekday")
+                label Vom __ bis zum __
+                div
+                    input.small(type="text", ng-model="timeframe.startDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                    span.wide -
+                    input.small(type="text", ng-model="timeframe.endDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                label jeweils am __
+                select.small(ng-model="timeframe.weekday", ng-options="day for day in weekdays")
+                label von __ bis __
+                div
+                    input.small(type="text", ng-model="timeframe.startInterval", bs-timepicker)
+                    span.wide -
+                    input.small(type="text", ng-model="timeframe.endInterval", bs-timepicker)
+            .centered
+                gm-button(
+                    ng-disabled="timeframe.startDate==undefined||timeframe.endDate==undefined||timeframe.startTime==''||timeframe.endTime==''||timeframe.end<=timeframe.start",
+                    ng-click="loadActions()") Tracks herunterladen
+        hr
+        label Ergebnis
+        div(ng-show='actionList.length<1'): i Keine Tracks geladen
+        div(ng-repeat='action in actionList | limitTo:actionLimit')
+            span(ng-hide="sameBulk(action, actionList[$index-1])") {{action.starttimestamp|date:'dd.MM.yy'}}
+            .track(ng-click='highlightAction(action.id)',
+            ng-class='{active: currentId == action.id}')
+                i.wide.icon-plus(ng-hide='action.expanded')
+                {{action.starttimestamp|date:'hh:mm'}}
+                i.wide.icon-arrow-right
+                | {{action.points | number:0}}
+                i.wide.icon-leaf
+        .centered
+            gm-button(ng-click='increaseLimit()') mehr
+    .contentColumn
+        label Anzahl: {{actionList.length}}
+        .content.mapContent
+            #tracksMap(style='border: 1px solid black; height: 100%; width: 100%;')
+        //.mapDiv.mapSliderDiv
+            div.left
+                gm-button(ng-click="previousPoint()"): i.icon-circle-arrow-left
+            div.center
+                .mapSlider(map-slider, event="actionLoaded", model="currentSelection")
+            div.right
+                gm-button(ng-click="nextPoint()"): i.icon-circle-arrow-right
+        //.mapDiv.mapKeyDiv
+            ul.unstyled
+                li
+                    input(type="checkbox", ng-model="checkMap")
+                    span.wide Karte anzeigen
+                li(ng-init="trackOpacity=0")
+                    label Deckkraft
+                    div(slider, model="trackOpacity")
+                //li
+                    input(type="checkbox", ng-model="checkFoot")
+                    span.wide Zu Fuß
+                //li
+                    input(type="checkbox", ng-model="checkBikes")
+                    span.wide Fahrradfahren
+        //.mapDiv.mapInfoDiv
+            div: i [{{currentSelection+1}}/{{currentAction.dataLength}}]
+            div(ng-switch="currentData.type")
+                div(ng-switch-when="gps")
+                    div Positionierung durch <b>GPS</b>
+                    div Zeit: {{currentData.timestamp | date:'medium'}}
+                    div Geschwindigkeit: {{currentData.speed*3.6 | number:2}} km/h
+                div(ng-switch-when="wifi")
+                    div Positionierung durch <b>Wifi</b>
+                    div Zeit: {{currentData.timestamp | date:'medium'}}
+                    div Router-Name: {{currentData.ssid}}
+                div(ng-switch-when="bluetooth")
+                    div Positionierung durch <b>Bluetooth</b>
+                    div Zeit: {{currentData.timestamp | date:'medium'}}
+                div(ng-switch-when="motion")
+                    div Gyro-Sensor-Ausschlag
+                    div Zeit: {{currentData.timestamp | date:'medium'}}
+                    div X: {{currentData.x | number:2}}
+                    div Y: {{currentData.y | number:2}}
+                    div Z: {{currentData.z | number:2}}

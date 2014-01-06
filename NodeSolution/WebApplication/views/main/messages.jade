@@ -1,0 +1,87 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 16:36
+   To change this template use File | Settings | File Templates.
+
+
+.topMargin
+    .controls
+        gm-button(ng-disabled='chosenMessage==undefined',ng-click='deleteMessage(chosenMessage)')
+            i.icon-trash.wide
+            | Löschen
+        gm-button(ng-click='refreshView()')
+            i.icon-refresh.wide
+            | Erneuern
+    h1.contentTitle Nachrichten
+    .overviewColumn
+        div(ng-repeat='message in model.messages | limitTo:messageLimit')
+            span(ng-hide="sameBulk(message, model.messages[$index-1])") {{message.timestamp|date:'dd.MM.yy'}}
+            .message(ng-click='choose($index)',
+                ng-class='{active: currentId == message.id}')
+                i.icon-fire.wide(ng-hide='message.read')
+                i.icon-envelope.wide
+                span(ng-bind-html-unsafe='message.subject', ng-class="!message.read")
+        .centered
+            gm-button(ng-click='increaseLimit()') mehr
+    .contentColumn
+        article(ng-switch='chosenMessage.typeid', class='read-{{chosenMessage.read}}')
+            //- Community join confirmation request
+            div(ng-switch-when='1')
+                hgroup(ng-click='toggleExpand($index)'): h1
+                    i.icon-fire.wide(ng-hide='chosenMessage.read')
+                    span(ng-bind-html-unsafe='chosenMessage.subject')
+                blockquote
+                    ul.inline
+                        li
+                            i.icon-envelope.wide
+                            a(href='#') {{chosenMessage.sendername}}
+                        li
+                            i.icon-time.wide
+                            {{chosenMessage.timestamp|date:'medium'}}
+                .messageText
+                    p(ng-bind-html-unsafe='chosenMessage.text')
+                    form.form-inline
+                        gm-button(ng-click='acceptJoinRequest(chosenMessage.reference)') Akzeptieren
+                        gm-button(ng-click='rejectJoinRequest(chosenMessage.reference)') Ablehnen
+                hr
+            //- User chosenMessage
+            div(ng-switch-when='2')
+                hgroup(ng-click='toggleExpand($index)'): h1
+                    i.icon-fire.wide(ng-hide='chosenMessage.read')
+                    span(ng-bind-html-unsafe='chosenMessage.subject')
+                blockquote
+                    ul.inline
+                        li
+                            i.icon-envelope
+                            i.icon-fire(ng-hide='chosenMessage.read')
+                            span.wide
+                            a(href='/user/{{chosenMessage.senderid}}') {{chosenMessage.sendername}}
+                        li
+                            i.icon-time
+                            span.wide
+                            {{chosenMessage.timestamp|date:'medium'}}
+                .messageText
+                    p(ng-bind-html-unsafe='chosenMessage.text')
+                div: textarea(class="form-control input-xxlarge", rows="3", ng-model="replyMessage", placeholder="Sofort antworten..")
+                .wide: gm-button(ng-disabled="replyMessage==undefined||replyMessage==''", ng-click="sendMessage(chosenMessage.senderid, replyMessage)") Antworten
+                hr
+            //- Join confirmation
+            div(ng-switch-when='3')
+                hgroup(ng-click='toggleExpand($index)'): h1
+                    i.icon-fire.wide(ng-hide='chosenMessage.read')
+                    span(ng-bind-html-unsafe='chosenMessage.subject')
+                blockquote
+                    ul.inline
+                        li
+                            i.icon-envelope
+                            i.icon-fire(ng-hide='chosenMessage.read')
+                            span.wide
+                            a(href='#') {{chosenMessage.sendername}}
+                        li
+                            i.icon-time
+                            span.wide
+                            {{chosenMessage.timestamp|date:'medium'}}
+                .messageText
+                    p(ng-bind-html-unsafe='chosenMessage.text')

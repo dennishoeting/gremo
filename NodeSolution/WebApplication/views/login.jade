@@ -1,0 +1,34 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 11:27
+   To change this template use File | Settings | File Templates.
+!!!5
+html(ng-app='loginApp')
+    head
+        include includes/styles
+        link(rel="stylesheet", href="css/loginStyle.css")
+
+        script(src='lib/jquery/jquery.min.js')
+        script(src='socket.io/socket.io.js') // virtual
+        !{loginlibjs}
+        !{sharedjs}
+        !{loginjs}
+    body(ng-controller='LoginCtrl')
+        #leaf
+        #corner
+            gm-button(ng-click="feedback()")
+                i.wide.icon-bullhorn
+                | Feedback
+            a(href="{{appLink}}", target="_blank")
+                img(alt="Android app on Google Play",
+                src="https://developer.android.com/images/brand/en_app_rgb_wo_45.png")
+        div(modal='loadingStatus<1', options="modalOpts")
+            .loadingModal
+                h1 Lade Daten ...
+                p Bitte warten
+        #events: gm-alert(ng-repeat='alert in alerts', type='alert.type', close='closeAlert($index)') {{alert.msg}}
+        header: h1 Gremo
+        #view(ng-view)
+        footer: p

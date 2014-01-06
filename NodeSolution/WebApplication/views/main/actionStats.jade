@@ -1,0 +1,66 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 16:37
+   To change this template use File | Settings | File Templates.
+
+div
+    include actionControls
+    h1.contentTitle Aktivitäten
+    include actionList
+    .contentColumn
+        ul.nav.nav-tabs
+            li.actionNav(ng-click='routeToOverview()')
+                a.black: i.icon-arrow-left
+            li.actionNav(ng-click='routeToMap(currentId)'): a.black Karte
+            li.actionNav.active(ng-click='routeToStats(currentId)'): a.black Statistiken
+        .content
+            .block
+                h1 Allgemein
+                table
+                    tr
+                        td: b  Hochgeladen am
+                        td {{action.actiondata.inserttimestamp | date:'medium'}}
+                    tr
+                        td: b Start
+                        td {{action.actiondata.starttimestamp | date:'medium'}}
+                    tr
+                        td: b Ende
+                        td {{action.actiondata.endtimestamp | date:'medium'}}
+                    tr
+                        td: b Dauer
+                        td {{action.actiondata.endtimestamp-action.actiondata.starttimestamp | duration}}
+                    tr
+                        td: b Distanz
+                        td {{action.actiondata.distance | number:2}} m
+                    tr
+                        td: b &#216;Geschwindigkeit
+                        td {{action.actiondata.distance / (((action.actiondata.endtimestamp-action.actiondata.starttimestamp)/1000)/3.6) | number:2}} km/h
+                    tr
+                        td: b  Punkte
+                        td {{action.actiondata.points | number:0}}
+                    tr
+                        td
+                            abbr(title="Bei {{fuelPrice[user.consumptiontype]}} Euro je Liter und {{user.consumption}} Liter auf 100km ({{user.consumptiontype}})")
+                                i.icon-info-sign.wide
+                            b Benzin Gespart
+                        td {{action.actiondata.distance / 1000 * user.consumption * fuelPrice[user.consumptiontype] / 100 | number:2}} &euro;
+            .block
+                h1 Gesammelte Daten
+                table
+                    tr
+                        td: b Daten gesamt:
+                        td {{action.gpsdata.length + action.wifidata.length + action.bluetoothdata.length + action.motiondata.length}}
+                    tr
+                        td: b  GPS Daten
+                        td {{action.gpsdata.length}}
+                    tr
+                        td: b  Wifi Daten
+                        td {{action.wifidata.length}}
+                    tr
+                        td: b  Bluetooth Daten
+                        td {{action.bluetoothdata.length}}
+                    tr
+                        td: b  Gyro Daten
+                        td {{action.motiondata.length}}

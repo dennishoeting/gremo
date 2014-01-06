@@ -1,0 +1,122 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 13:42
+   To change this template use File | Settings | File Templates.
+
+.topMargin
+    .controls
+        select(ng-model='selectedLoop', ng-options='loop.name for loop in inductionLoops')
+        gm-button(ng-click='openImportInductionloopDataDialog()')
+            i.icon-list.wide
+            | Datenimport
+        gm-button(ng-click='openCreateInductionloopDialog()')
+            i.icon-plus.wide
+            | Neu
+        gm-button(ng-click='refreshView()')
+            i.icon-refresh.wide
+            | Erneuern
+    h1.contentTitle Induktionsschleifen
+    .overviewColumn
+        div(ng-show="selectedLoop==undefined")
+            i Selektiere eine Induktionsschleife
+        div(ng-show="selectedLoop!=undefined")
+            table
+                tr
+                    td: b Name:
+                    td {{selectedLoop.name}}
+                tr
+                    td: b Typ:
+                    td {{selectedLoop.typeid}}
+                tr(colspan="2")
+                    td: label Position
+                tr
+                    td: b Stadt (PLZ):
+                    td {{selectedLoop.address.city}} ({{selectedLoop.address.postcode}})
+                tr
+                    td: b Straße:
+                    td  {{selectedLoop.address.road}} {{selectedLoop.address.house_number}}
+            hr
+            label(ng-click="collapseQuery=!collapseQuery")
+                i.icon-circle-arrow-right(ng-show="collapseQuery")
+                i.icon-circle-arrow-down(ng-hide="collapseQuery")
+                span.wide Abfrageformulierung
+            div(ng-hide="collapseQuery")
+                gm-button(ng-disabled="queryType.absolute", ng-click="setAbsolute()") Absolut
+                gm-button(ng-disabled="queryType.interval", ng-click="setInterval()") Tag
+                gm-button(ng-disabled="queryType.weekday", ng-click="setWeekday()") Wochentag
+                div(ng-show="queryType.absolute")
+                    label Start
+                    div
+                        input.small(type="text", ng-model="timeframe.startDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                        span.wide :
+                        input.small(type="text", ng-model="timeframe.startTime", bs-timepicker)
+                    label Ende
+                    div
+                        input.small(type="text", ng-model="timeframe.endDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                        span.wide :
+                        input.small(type="text", ng-model="timeframe.endTime", bs-timepicker)
+                div(ng-show="queryType.interval")
+                    label Vom __ bis zum __
+                    div
+                        input.small(type="text", ng-model="timeframe.startDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                        span.wide -
+                        input.small(type="text", ng-model="timeframe.endDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                    label Jeweils von __ bis __
+                    div
+                        input.small(type="text", ng-model="timeframe.startInterval", bs-timepicker)
+                        span.wide -
+                        input.small(type="text", ng-model="timeframe.endInterval", bs-timepicker)
+                div(ng-show="queryType.weekday")
+                    label Vom __ bis zum __
+                    div
+                        input.small(type="text", ng-model="timeframe.startDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                        span.wide -
+                        input.small(type="text", ng-model="timeframe.endDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                    label jeweils am __
+                    select.small(ng-model="timeframe.weekday")
+                        option(ng-repeat="day in weekdays") {{day}}
+                    label von __ bis __
+                    div
+                        input.small(type="text", ng-model="timeframe.startInterval", bs-timepicker)
+                        span.wide -
+                        input.small(type="text", ng-model="timeframe.endInterval", bs-timepicker)
+            hr
+            gm-button(ng-disabled="timeframe.startDate==undefined||timeframe.endDate==undefined||timeframe.startTime==''||timeframe.endTime==''||timeframe.endDate<=timeframe.startDate", ng-click="calculateRatio()") Berechnen
+            label Ergebnisse
+            table.centered.fullWidth
+                tr
+                    th
+                    th #
+                    th %
+                tr(ng-show="ratioResults.length<1")
+                    td(colspan="6"): i Bisher keine Ergebnisse vorhanden
+                tr(ng-repeat="result in ratioResults | limitTo:10", title='{{result.caption}}', ng-click="result.open = !result.open")
+                    td.top(ng-hide="result.open"): i.icon-arrow-right
+                    td.top(ng-show="result.open"): i.icon-arrow-down
+                    td.top {{$index+1}}
+                    td.top
+                        table
+                            tr
+                                td Gew. Verhältnis
+                                td: b {{((result.inductionloopdetection_coverage/result.bluetoothdetection_coverage)*result.ratio)*100 | number:2}}%
+                            tr(ng-show="result.open")
+                                td Roh-Verhältnis
+                                td {{result.ratio*100 | number:2}}%
+                            tr(ng-show="result.open")
+                                td Anz. IS-Daten
+                                td {{result.inductionloopdetection_count | number:0}}
+                            tr(ng-show="result.open")
+                                td Anz. BT-Daten
+                                td {{result.bluetoothdetection_count | number:0}}
+                            tr(ng-show="result.open")
+                                td IS-Abdeckung
+                                td {{result.inductionloopdetection_coverage | number:2}}
+                            tr(ng-show="result.open")
+                                td BT-Abdeckung
+                                td {{result.bluetoothdetection_coverage | number:2}}
+    .contentColumn
+        label Anzahl: {{inductionLoops.length}}
+        .content.mapContent
+            #inductionLoopMap(style='border: 1px solid black; height: 100%; width: 100%;')

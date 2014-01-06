@@ -1,0 +1,34 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 13:43
+   To change this template use File | Settings | File Templates.
+
+div
+    .controls
+        gm-button(ng-click='') Erneuern
+    div
+        table.fullWidth
+            tr
+                td: b ID:
+                td: b Name:
+                td.fullWidth: b Description:
+            tr(ng-show='communities.length<1')
+                td(colspan='3'): i No data available ... you might hit refresh :-)
+            tr(ng-repeat='community in communities')
+                td {{community.id}}
+                td {{community.name}}
+                td {{community.description}}
+    hr
+    div
+        table.fullWidth
+            tr
+                td: b ID:
+                td: b Name:
+            tr(ng-show='communities.length<1')
+                td(colspan='2'): i No data available ... you might hit refresh :-)
+            tr(ng-repeat='communityType in communityTypes')
+                td {{communityType.id}}
+                td {{communityType.name}}
+    hr

@@ -1,0 +1,48 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 16:37
+   To change this template use File | Settings | File Templates.
+
+.topMargin
+    .controls
+        gm-button(ng-click='joinCommunity()', ng-show='!community.joined') Gruppe beitreten
+        //gm-button(ng-click='rejectJoinRequest()', ng-show='community.joined && !community.confirmed') Beitrittsanfrage zurückziehen
+        gm-button(ng-click='leaveCommunity()', ng-show='community.joined && community.confirmed') Gruppe verlassen
+        gm-button(ng-click='refreshView()')
+            i.icon-refresh.wide
+            | Erneuern
+    h1.contentTitle {{community.name}}
+    h2.subTitle
+        | Gegründet am {{community.inserttimestamp | date:'dd.MM.yyyy'}} von
+        a.wide(href='/user/{{community.founderid}}') {{community.foundernickname || community.founderemail}}
+    .block
+        h1 Beschreibung
+        p {{community.description}}
+    .block
+        h1 Daten
+        table.table
+            tr
+                td Rang
+                td {{community.rank}}
+            tr
+                td #Mitglieder
+                td {{community.usercount}}
+            tr
+                td Punkte
+                td {{community.points}}
+                    i.icon-leaf
+            tr
+                td Offene Gruppe
+                td
+                    span(ng-show="community.requiresconfirmation") Nein
+                    span(ng-hide="community.requiresconfirmation") Ja
+    .block
+        h1 Mitglieder
+        pagination.pagination-small(num-pages="noOfMemberPages", current-page="currentMemberPage")
+        table
+            tr(ng-show='memberList.length<1')
+            tr(ng-repeat='member in memberList')
+                td
+                    a.black(ng-click='routeToUser(member.id)') {{member.nickname || member.email}}

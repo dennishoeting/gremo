@@ -1,0 +1,23 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+form
+    .modal-header
+        h1
+            i.wide.icon-bullhorn
+            | Feedback
+    .modal-body
+        .block
+            p.
+                Ist Dir ein Fehler der Webseite oder der App aufgefallen?
+                Hast Du Anmerkungen oder Verbesserungsvorschläge oder fehlt Dir eine bestimmte Funktion?<br />
+                Wir freuen uns über Dein konstruktives Feedback bezüglich <i>Gremo</i>.
+                Optional kannst Du Deine E-Mail-Adresse angeben, damit wir Dir antworten können.
+            p: input(type="email", ng-model="feedback.email", placeholder="E-Mail für Rückantwort")
+            textarea(class="form-control input-xlarge", rows="6", ng-model="feedback.message", placeholder="Nachricht")
+    .modal-footer
+        gm-button(ng-disabled="feedback.message==undefined || feedback.message==''", ng-click='send(feedback)', type='submit') Senden
+        gm-button(ng-click='close()') Abbrechen

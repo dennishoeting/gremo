@@ -1,0 +1,172 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 13:42
+   To change this template use File | Settings | File Templates.
+
+.topMargin
+    .controls
+        gm-button(ng-click='refreshView()')
+            i.icon-refresh.wide
+            | Erneuern
+    h1.contentTitle Bluetooth-Sensoren
+    .overviewColumn
+        label(ng-click="collapseDetails=!collapseDetails")
+            i.icon-circle-arrow-right(ng-show="collapseDetails")
+            i.icon-circle-arrow-down(ng-hide="collapseDetails")
+            span.wide Details
+        div(ng-hide="collapseDetails")
+            div(ng-show="selectedSensor==undefined")
+                    i Selektiere einen Sensor
+            table(ng-hide="selectedSensor==undefined")
+                tr
+                    td: b ID:
+                    td {{selectedSensor.id}}
+                tr
+                    td: b MAC:
+                    td {{selectedSensor.sensorid}}
+                tr
+                    td: b Aktiv:
+                    td
+                        span(ng-show="selectedSensor.isactive") Ja
+                        span(ng-hide="selectedSensor.isactive") Nein
+                tr
+                    td: b Punkte je Scan:
+                    td {{selectedSensor.pointsperdetection}}
+                tr(colspan="2")
+                    td: label Position
+                tr
+                    td: b Stadt (PLZ):
+                    td {{selectedSensor.address.city}} ({{selectedSensor.address.postcode}})
+                tr
+                    td: b Straße:
+                    td  {{selectedSensor.address.road}} {{selectedSensor.address.house_number}}
+        hr
+        label(ng-click="collapseQuery=!collapseQuery")
+            i.icon-circle-arrow-right(ng-show="collapseQuery")
+            i.icon-circle-arrow-down(ng-hide="collapseQuery")
+            span.wide Abfrageformulierung
+        div(ng-hide="collapseQuery")
+            gm-button(ng-disabled="queryType.absolute", ng-click="setAbsolute()") Absolut
+            gm-button(ng-disabled="queryType.interval", ng-click="setInterval()") Tag
+            gm-button(ng-disabled="queryType.weekday", ng-click="setWeekday()") Wochentag
+            div(ng-show="queryType.absolute")
+                label Start
+                div
+                    input.small(type="text", ng-model="timeframe.startDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                    span.wide :
+                    input.small(type="text", ng-model="timeframe.startTime", bs-timepicker)
+                label Ende
+                div
+                    input.small(type="text", ng-model="timeframe.endDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                    span.wide :
+                    input.small(type="text", ng-model="timeframe.endTime", bs-timepicker)
+            div(ng-show="queryType.interval")
+                label Vom __ bis zum __
+                div
+                    input.small(type="text", ng-model="timeframe.startDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                    span.wide -
+                    input.small(type="text", ng-model="timeframe.endDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                label Jeweils von __ bis __
+                div
+                    input.small(type="text", ng-model="timeframe.startInterval", bs-timepicker)
+                    span.wide -
+                    input.small(type="text", ng-model="timeframe.endInterval", bs-timepicker)
+            div(ng-show="queryType.weekday")
+                label Vom __ bis zum __
+                div
+                    input.small(type="text", ng-model="timeframe.startDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                    span.wide -
+                    input.small(type="text", ng-model="timeframe.endDate", data-date-format="dd.mm.yyyy", bs-datepicker)
+                label jeweils am __
+                select.small(ng-model="timeframe.weekday")
+                    option(ng-repeat="day in weekdays") {{day}}
+                label von __ bis __
+                div
+                    input.small(type="text", ng-model="timeframe.startInterval", bs-timepicker)
+                    span.wide -
+                    input.small(type="text", ng-model="timeframe.endInterval", bs-timepicker)
+        gm-button(ng-disabled="selectedSensor==undefined||timeframe.startDate==undefined||timeframe.endDate==undefined||timeframe.startTime==''||timeframe.endTime==''||timeframe.endDate<=timeframe.startDate", ng-click="calculateTracks()") Fahrtzeiten berechnen
+        hr
+        label(ng-click="collapseResult=!collapseResult")
+            i.icon-circle-arrow-right(ng-show="collapseResult")
+            i.icon-circle-arrow-down(ng-hide="collapseResult")
+            span.wide Ergebnis
+        div(ng-hide="collapseResult")
+            table
+                tr
+                    td
+                    td {{selectedSensor.address.road}} {{selectedSensor.address.house_number}} <=>
+                tr(ng-show="bluetoothTracks.length<1")
+                    td(colspan="2"): i Keine Fahrtzeiten gefunden
+                tr(ng-repeat="track in bluetoothTracks")
+                    td.top(ng-hide="track.open",ng-click="track.open=!track.open"): i.wide.icon-arrow-right
+                    td.top(ng-show="track.open",ng-click="track.open=!track.open"): i.wide.icon-arrow-down
+                    td.top
+                        | {{track.address.road}} {{track.address.house_number}} ({{track.averageDurationTotal | duration}})
+                        table(ng-show="track.open")
+                            tr
+                                td.top(ng-hide="track.startsOpen",ng-click="track.startsOpen=!track.startsOpen"): i.wide.icon-arrow-right
+                                td.top(ng-show="track.startsOpen",ng-click="track.startsOpen=!track.startsOpen"): i.wide.icon-arrow-down
+                                td.top
+                                    | <b>von</b> {{track.address.road}} {{track.address.house_number}} ({{track.averageDurationStarts | duration}})
+                                    table(ng-show="track.startsOpen")
+                                        tr(ng-repeat="entry in track.entries.starts")
+                                            td.top(ng-hide="entry.open",ng-click="entry.open=!entry.open"): i.wide.icon-arrow-right
+                                            td.top(ng-show="entry.open",ng-click="entry.open=!entry.open"): i.wide.icon-arrow-down
+                                            td.top
+                                                | {{Math.abs(entry.partner_start - entry.self_end) | duration}}
+                                                table(ng-show="entry.open")
+                                                    tr
+                                                        td: b Id
+                                                        td {{entry.id}}
+                                                    tr
+                                                        td: b Ankunft {{track.address.road}} {{track.address.house_number}}
+                                                        td {{entry.partner_start | date:'HH:mm:ss'}}
+                                                    tr
+                                                        td: b Abfahrt {{track.address.road}} {{track.address.house_number}}
+                                                        td {{entry.partner_end | date:'HH:mm:ss'}}
+                                                    tr
+                                                        td: b Ankunft {{selectedSensor.address.road}} {{selectedSensor.address.house_number}}
+                                                        td {{entry.self_start | date:'HH:mm:ss'}}
+                                                    tr
+                                                        td: b Abfahrt {{selectedSensor.address.road}} {{selectedSensor.address.house_number}}
+                                                        td {{entry.self_end | date:'HH:mm:ss'}}
+                                                    tr
+                                                        td: b Dauer
+                                                        td {{Math.abs(entry.partner_start - entry.self_end) | duration}}
+                            tr
+                                td.top(ng-hide="track.endsOpen",ng-click="track.endsOpen=!track.endsOpen"): i.wide.icon-arrow-right
+                                td.top(ng-show="track.endsOpen",ng-click="track.endsOpen=!track.endsOpen"): i.wide.icon-arrow-down
+                                td.top
+                                    | <b>zu</b> {{track.address.road}} {{track.address.house_number}} ({{track.averageDurationEnds | duration}})
+                                    table(ng-show="track.endsOpen")
+                                        tr(ng-repeat="entry in track.entries.ends")
+                                            td.top(ng-hide="entry.open",ng-click="entry.open=!entry.open"): i.wide.icon-arrow-right
+                                            td.top(ng-show="entry.open",ng-click="entry.open=!entry.open"): i.wide.icon-arrow-down
+                                            td.top
+                                                | {{Math.abs(entry.partner_start - entry.self_end) | duration}}
+                                                table(ng-show="entry.open")
+                                                    tr
+                                                        td: b Id
+                                                        td {{entry.id}}
+                                                    tr
+                                                        td: b Ankunft {{selectedSensor.address.road}} {{selectedSensor.address.house_number}}
+                                                        td {{entry.self_start | date:'HH:mm:ss'}}
+                                                    tr
+                                                        td: b Abfahrt {{selectedSensor.address.road}} {{selectedSensor.address.house_number}}
+                                                        td {{entry.self_end | date:'HH:mm:ss'}}
+                                                    tr
+                                                        td: b Ankunft {{track.address.road}} {{track.address.house_number}}
+                                                        td {{entry.partner_start | date:'HH:mm:ss'}}
+                                                    tr
+                                                        td: b Abfahrt {{track.address.road}} {{track.address.house_number}}
+                                                        td {{entry.partner_end | date:'HH:mm:ss'}}
+                                                    tr
+                                                        td: b Dauer
+                                                        td {{Math.abs(entry.self_start - entry.partner_end) | duration}}
+    .contentColumn
+        label Anzahl: {{bluetoothSensorsCount}}
+        .content.mapContent
+            #bluetoothSensorMap(style='border: 1px solid black; height: 100%; width: 100%;')

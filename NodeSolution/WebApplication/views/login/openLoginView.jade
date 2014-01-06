@@ -1,0 +1,65 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 04.06.13
+   Time: 13:32
+   To change this template use File | Settings | File Templates.
+#main
+    div.content
+        .block
+            h1 Warum das alles?
+            p.
+                Oldenburg ist Fahrradstadt und beherbergt <a href="http://www.oldenburg.de/?id=2040">laut eigener Angabe</a> mehr Fahrräder als Einwohner.
+                Um den Fluss des Fahrradverkehrs zu optimieren, muss er zuerst analysiert werden. Es werden Fragen gestellt nach der Auslastung der Fahrradwege,
+                der Nutzbarkeit solcher Wege, Durchschnittsgeschwindigkeiten und Fahrtzeiten.<br />
+                Die Doppel-Masterarbeit <i>&quot;Crowd Sensing for Cycle Traffic in a Smart City&quot;</i> leistet einen Beitrag zur Verbesserung des Fahrradverkehrs in Oldenburg.
+                Ein Sensornetzwerk erfasst anonym Verkehrsteilnehmer in Oldenburg und sendet diese an ein System im Hintergrund.
+                Hier werden die Daten kombiniert, analysiert und interpretiert, um daraus die geforderten Informationen zu extrahieren.
+                Die <a href="{{appLink}}" target="_blank">Gremo-App</a> bietet jedem zusätzlich die Möglichkeit, aktiv an der Verbesserung des Fahrradverkehrs in Oldenburg mitzuarbeiten.
+                Nach der Registrierung kannst Du die App herunterladen, Fahrtstrecken aufzeichnen, hochladen und dafür Punkte sammeln. Tritt in den Wettbewerb mit anderen Mitgliedern und werde Dir bewusst darüber, wie viel Benzinkosten du wöchentlich sparst.
+                Zusätzlich besteht auch für nicht registrierte Nutzer die Möglichkeit, eigene Tracks (aus Google Meine Tracks) zu spenden.
+                Trackspender und aktive Gremo-Nutzer haben die Möglichkeit an einer kostenlosen Verlosung eines aktuellen Android Smart Phones teilzunehmen.
+        .block
+            h1 Was passiert mit meinen Daten?
+            p.
+                Alle gesammelten Daten werden anonymisiert gespeichert.
+                Es besteht keinerlei Verbindung zwischen deiner Person und Deinen Daten. Es werden keine persönlichen Daten verlangt und es besteht für Dich jederzeit die Möglichkeit,
+                hochgeladene Daten wieder zu löschen oder zu anonymisieren. Im zweiten Fall wird jegliche Verbindung zwischen den Daten und Deinem Account gekappt.
+                Auch die durch Sensoren gesammelten Daten sind nur über einen Zeitraum von maximal 24 Stunden miteinander verknüpfbar,
+                sodass nicht einmal aus den Daten selbst ein Rückschluss auf den Nutzer möglich ist.
+        .block.largest
+            h1 Projektabschluss
+            p.
+                Am 31.10.2013 endet das Projekt Gremo.<br />
+                Wir bedanken uns bei allen Beteiligten, insbesondere den Mitarbeitern der Verkehrsleitzentrale in Oldenburg,
+                der Stadt Oldenburg, des OFFIS und des schlauen Hauses.<br />
+                Danke an die Mitarbeiter der Presseabteilung der Carl von Ossietzky Universität Oldenburg
+                und die Redakteure der NWZ und des lokalen Fernsehsenders oeins.<br />
+                Vielen Dank an das Restaurant Kizmet am Lappan, sowie Jürgen Geuter, Rainer Droste, Frank Ockenga und den Hackspace Oldenburg.<br />
+                Dank ebenfalls an unsere Betreuer Jun.-Prof. Dr. rer. nat. Daniela Nicklas, Apl. Prof. Dr.-Ing. Jürgen Sauer und M. Sc. Stephan Jansen.
+        .block.larger
+            h1 TV-Beitrag bei oeins
+            p.
+                Der TV-Beitrag über das Gremo-Projekt steht in der <a href="http://www.oeins.de/lokalsender/mediathek2/201308281800_oeins-aktuell.html">Mediathek von oeins</a> bereit.<br />
+                Alternativ steht der <a href="http://www.ma-gremo.de/video/VTS_01_1.VOB" alt="TV-Beitrag oeins im VOB-Format">Beitrag als Video zum Download</a> bereit.
+    //.block.large
+            h1 Herzlichen Dank
+            p Wir danken [...] für die Zusammenarbeit
+    aside
+        form(method='post', action='/openLogin')
+            h1 Login
+            p: input.large(name='username', placeholder='Benutzername', type='text', requiered)
+            p: input.large(placeholder='Passwort', type='password', required, ng-model='loginData.uncryptPass')
+            p
+                input(type='text', ng-show, name='password', ng-model='loginData.cryptPass')
+                input(type='text', ng-show, name='dest', ng-model='loginData.dest')
+                gm-button.large(type='submit') Einloggen
+        hr
+        form(method='post', action='/openRegister')
+            h1 Registrierung
+            p: input.large(name='name', placeholder='Benutzername (sichtbar)', type='text', required, ng-model='regData.name')
+            p: input.large(placeholder='Passwort', type='password', required, ng-model='regData.password')
+            p: input.large(placeholder='Passwort bestätigen', type='password', required, ng-model='regData.password2')
+            p
+                input(type='text', ng-show, name='password', ng-model='regData.cryptPass')
+                gm-button.large(type='submit', ng-disabled='!validate()') Registrieren

@@ -1,0 +1,34 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+.modal-header
+    h1 Suche nach anderen Benutzern
+.modal-body
+    | Ergebnisse für die Suche nach
+    b "{{lastPattern}}"
+    table.table.table-hover
+        tr
+            th #
+            th Name
+        tr(ng-show='busy')
+            td(colspan='2')
+                i.icon-road
+                i Bearbeite Anfrage ...
+        tr(ng-show='ng-show', results.length='results.length')
+        tr.navbar-link(ng-repeat='user in results')
+            td {{$index+1}}
+            td
+                a.black(ng-click='routeToUser(user.id)') {{user.nickname || user.email | cut:30:'...'}}
+        tr(ng-show='more')
+            td(colspan='2')
+                a(ng-click='search(pattern)') ... get more
+    hr
+    form.form-search
+        .input-append
+            input.span2.search-query(type='text', placeholder='Suche verfeinern', ng-model='pattern')
+            button.btn(ng-click='searchUser(pattern)', ng-disabled='!pattern.length||pattern.length<1', pattern.length='pattern.length') Los!
+.modal-footer
+    gm-button(ng-click='close()') Schließen

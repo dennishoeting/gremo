@@ -1,0 +1,34 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+.modal-header
+    h1
+        i.wide.icon-gift
+        | Track hochladen
+.modal-body
+    .block
+        p.
+            Vielleicht hast du mit einer anderen Applikation (bspw. Google Meine Tracks) bereits eine Tour aufgenommen.
+            Wir würden uns sehr darüber freuen, wenn Du die entsprechende Datei (bevorzugt im KML-Format, gern auch in anderem Format) mit uns teilst.
+            Die Datei wird mit anderem Namen und ohne Hinweis auf Deine Identität gespeichert. Sobald das Hochladen abgeschlossen ist, kannst du ma <b>Gewinnspiel</b> teilnehmen.
+    .block
+        h1 Typ des Tracks
+        p
+            input(type="radio", name="track_type", value="3", ng-model="actionType")
+            span Fahrrad fahren
+        p
+            input(type="radio", name="track_type", value="2", ng-model="actionType")
+            span Zu Fu&szlig; gehen
+    .block
+        h1 Datei-Upload
+        input#file_input.hide(type="file", accept=".kml,.gpx")
+        span(ng-click='chooseFile()')
+            label(for="chosenFile") Datei:
+            input(type="text", ng-model="filePath")
+            p.help-block Akzeptierte Formate: *.kml, *.gpx
+.modal-footer
+    gm-button(ng-click='upload()') Hochladen
+    gm-button(ng-click='close()') Verwerfen

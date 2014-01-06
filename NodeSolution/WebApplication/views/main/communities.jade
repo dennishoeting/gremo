@@ -1,0 +1,53 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 16:36
+   To change this template use File | Settings | File Templates.
+
+
+.topMargin
+    .controls
+        gm-button(ng-click='createCommunity()')
+            i.icon-plus
+            | Eigene Gruppe gründen
+        gm-button(ng-click='refreshView()')
+            i.icon-refresh.wide
+            | Erneuern
+    h1.contentTitle Gruppen
+    .block
+        h1 Meine Freunde
+        form.form-search
+            .input-append
+                input.span2.search-query(type='text', placeholder='Benutzer suchen', ng-model='userSearchPattern')
+                button.btn(ng-click='searchForUser(userSearchPattern)', ng-disabled='userSearchPattern.length<1', userSearchPattern.length='userSearchPattern.length') Los
+        pagination.pagination-small(num-pages="noOfFriendPages", current-page="currentFriendPage")
+        table
+            tr(ng-show='friendList.length<1')
+                td: i Keine
+            tr(ng-repeat='friend in friendList')
+                td
+                    a.black(ng-click='routeToUser(friend.id)') {{friend.nickname || friend.email}}
+    .block
+        h1 Meine Gruppen
+        form.form-search
+            .input-append
+                input.span2.search-query(type='text', placeholder='Gruppe suchen', ng-model='groupSearchPattern')
+                button.btn(ng-click='searchForCommunity(groupSearchPattern)', ng-disabled='groupSearchPattern.length<1', groupSearchPattern.length='groupSearchPattern.length') Los
+        pagination.pagination-small(num-pages="noOfCommunityPages", current-page="currentCommunityPage")
+        table
+            tr(ng-show='communityList.length<1')
+                td: i Keine
+            tr(ng-repeat='community in communityList')
+                td
+                    a.black(ng-click='routeToCommunity(community.id)', title='{{community.name}}')
+                        abbr(title='Beitritt noch nicht bestätigt.'): i.icon-exclamation-sign.wide(ng-hide='community.confirmed')
+                        | {{community.name|cut:false:30:'...'}}
+                td
+                    span.wide
+                        | ({{community.points + ' '}}
+                        i.icon-leaf
+                        | )
+                td
+                    a(ng-click='leaveCommunity(community.id)', title='Gruppe verlassen')
+                        i.icon-remove

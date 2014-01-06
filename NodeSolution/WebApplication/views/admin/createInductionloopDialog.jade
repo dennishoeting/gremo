@@ -1,0 +1,27 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+form
+    .modal-header
+        h1 Induktionsschleifendaten importieren
+    .modal-body
+        .dialogLeft
+            label(for="il_name") Name
+            input#il_name(type="text", ng-model="newLoop.name")
+            label(for="il_position_lat, il_position_lng") Position
+            div
+                input#il_position_lng(type="text", ng-model="newLoop.lng", title="Klick in die Karte", readonly)
+            div
+                input#il_position_lat(type="text", ng-model="newLoop.lat", title="Klick in die Karte", readonly)
+            label(for="il_type") Typ
+            select#il_type(ng-model='chosenType', ng-options="type.name for type in loopTypes")
+            label(for="il_group") Gruppe
+            select#il_group(ng-model='chosenGroup', ng-options="type.name for type in loopGroups")
+        .dialogRight.bordered
+            #createInductionloopMap(style='height: 100%; width: 100%;')
+    .modal-footer
+        gm-button(ng-click="createLoop(newLoop)") Erstellen
+        gm-button(ng-click='close()') Abbrechen

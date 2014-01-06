@@ -1,0 +1,28 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+.modal-header
+    h1 Datenverwaltung
+.modal-body
+    .dialogLeft
+        p Hier kannst Du bestimmen, was mit Deinen Daten geschieht.
+        p Du kannst deine Daten entweder Löschen oder Anonymisieren. Beim Löschen werden alle Daten, die mit Dir in Zusammenhang gebracht werden können rückstandslos gelöscht. Bei der Anonymisierung wird jegliche Verbindung zu Dir gekappt, die Daten selbst werden jedoch nicht gelöscht. Die Daten können dann jedoch nicht mehr mit Dir in Verbindung gebracht werden!
+        p Bei der Anonymisierung erhälst Du 50% der Punktzahl für die Daten nochmals auf Dein Konto gutgeschrieben.
+    .dialogRight
+        pagination.pagination-small(num-pages="noOfPages", current-page="currentPage")
+        table
+            tr
+                th Zeit
+                th Punkte
+                th
+                th
+            tr(ng-repeat="date in data")
+                td.wide(abbr="{{date.time | date:'dd.MM.yyyy hh:mm'}}") {{date.time | date:'dd.MM.yyyy'}}
+                td.wide {{date.pointsearned}}
+                td.wide: a(href="#", ng-click="deleteData(date)") Löschen
+                th.wide: a(href="#", ng-click="anonymizeData(date)") Anonymisieren
+.modal-footer
+    gm-button(ng-click='close()') Schließen

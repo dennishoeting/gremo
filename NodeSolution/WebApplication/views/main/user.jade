@@ -1,0 +1,48 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 16:38
+   To change this template use File | Settings | File Templates.
+
+
+.topMargin
+    .controls
+        gm-button(ng-click="makeFriendRequest(user.id)") Freundschaftsanfrage
+        gm-button(ng-click='refreshView()')
+            i.icon-refresh.wide
+            | Erneuern
+    h1.contentTitle Profil von {{user.nickname || user.email}}
+    h2.subTitle Mitglied seit dem {{user.membersince | date:'dd.MM.yyyy'}}
+    .block
+        h1 Daten
+        table.table
+            tr
+                td Punkte
+                td {{user.points}}
+                    i.icon-leaf
+            tr
+                td Rang
+                td {{user.rank}}
+    .block
+        h1 Gruppen
+        pagination.pagination-small(num-pages="noOfCommunityPages", current-page="currentCommunityPage")
+        table
+            tr(ng-show='communityList.length<1')
+                td: i Keine
+            tr(ng-repeat='community in communityList')
+                td
+                    a.black(ng-click='routeToCommunity(community.id)') {{community.name}}
+    .block
+        h1 Freunde
+        pagination.pagination-small(num-pages="noOfFriendPages", current-page="currentFriendPage")
+        table
+            tr(ng-show='friendList.length<1')
+                td: i Keine
+            tr(ng-repeat='friend in friendList')
+                td
+                    a.black(ng-click='routeToUser(friend.id)') {{friend.nickname || friend.email}}
+    .block
+        h1 Nachricht
+        textarea(class="form-control larger", rows="3", ng-model="message")
+        .wide: gm-button(ng-disabled="message==undefined||message==''",ng-click="sendMessage(user.id, message)") Send

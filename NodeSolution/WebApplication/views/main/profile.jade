@@ -1,0 +1,138 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 08.05.13
+   Time: 16:37
+   To change this template use File | Settings | File Templates.
+
+#profile.topMargin
+    h1.contentTitle Profil
+    .controls
+        gm-button(ng-click='saveProfileData()', ng-disabled='!profileDataHasChanged()')
+            i.icon-ok
+            | Speichern
+        gm-button(ng-click='maintainProfileData()', ng-disabled='!profileDataHasChanged()')
+            i.icon-remove
+            | Verwerfen
+    .block
+        h1 Accountbezogene Einstellungen
+        table.form(ng-init='pwCollapsed=true')
+            tr
+                td Mitglied seit:
+                td {{model.self.membersince|date:'dd.MM.yyyy'}}
+            tr
+                td
+                    label(for='email') E-Mail:
+                td
+                    input#email(ng-model='changedUser.email', type='email', readonly='readonly')
+            tr
+                td
+                    label(for='password') Password:
+                td
+                    input#password(ng-model='changedUser.password', type='password', ng-readonly='pwCollapsed')
+            tr
+                td
+                td(colspan='2')
+                    span(ng-show='pwCollapsed')
+                        gm-button(ng-click='changePasswordClick()')
+                            i.icon-pencil
+                            | Passwort ändern
+                    span(ng-hide='pwCollapsed')
+                        gm-button(ng-click='maintainPasswordClick()')
+                            i.icon-pencil
+                            | Passwort beibehalten
+            tr
+                td
+                    div(collapse='pwCollapsed')
+                        label(for='passwordNew1') Neues Passwort:
+                td
+                    div(collapse='pwCollapsed')
+                        input#passwordNew1(ng-model='newPass1', type='password', required='required')
+            tr(collapse='pwCollapsed')
+                td
+                    div(collapse='pwCollapsed')
+                        label(for='passwordNew2') Bestätigung:
+                td
+                    div(collapse='pwCollapsed')
+                        input#passwordNew2(ng-model='newPass2', type='password', required='required')
+            tr
+                td(colspan='2')
+                    hr
+            tr
+                td.text-right
+                    div(collapse='pwCollapsed')
+                        gm-button(ng-click='savePassword(newPass1, newPass2)', ng-disabled='!validatePasswords(newPass1, newPass2)')
+                            i.icon-ok
+                            | Ändern
+                td
+                    div(collapse='pwCollapsed')
+                        gm-button(ng-click='maintainPassword()')
+                            i.icon-remove
+                            | Verwerfen
+    .block
+        h1 Persönliche Einstellungen (optional)
+        table.form
+            tr
+                td
+                    label(for='nickname') Nickname:
+                td
+                    input#nickname(ng-model='changedUser.nickname', type='text')
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.nickname != changedUser.nickname')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.nickname != changedUser.nickname')
+            tr
+                td
+                    label(for='firstname') Vorname:
+                td
+                    input#firstname(ng-model='changedUser.firstname', type='text')
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.firstname != changedUser.firstname')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.firstname != changedUser.firstname')
+            tr
+                td
+                    label(for='lastname') Nachname:
+                td
+                    input#lastname(ng-model='changedUser.lastname', type='text')
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.lastname != changedUser.lastname')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.lastname != changedUser.lastname')
+            tr
+                td
+                    label(for='birthyear') Geburtsjahr:
+                td
+                    input#birthyear(ng-model='changedUser.birthyear', type='number', min='1900', max='thisYear')
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.birthyear != changedUser.birthyear')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.birthyear != changedUser.birthyear')
+    .block
+        h1 Zusätzliche Einstellungen
+        table.form
+            tr
+                td
+                    label(for='zipcode') Postleitzahl:
+                td
+                    input#zipcode(ng-model='changedUser.zipcode', type='number')
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.zipcode != changedUser.zipcode')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.zipcode != changedUser.zipcode')
+            tr
+                td
+                    label(for='postaddress') Anschrift:
+                td
+                    input#postaddress(ng-model='changedUser.postaddress', type='text')
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.postaddress != changedUser.postaddress')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.postaddress != changedUser.postaddress')
+            tr
+                td
+                    label(for='fueltype') Benzinart:
+                td
+                    select#fueltypelist
+                        option Super Benzin
+                        option Super E10
+                        option Super Plus
+                        option Diesel
+                        option Gas
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.zipcode != changedUser.zipcode')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.zipcode != changedUser.zipcode')
+            tr
+                td
+                    label(for='avgconsumption') Durchschn. Verbrauch
+                td
+                    input(type='number')
+                    abbr(title='Keine Änderung gemacht.'): i.icon-ok-circle(ng-hide='model.self.zipcode != changedUser.zipcode')
+                    abbr(title='Änderung gemacht.'): i.icon-edit(ng-show='model.self.zipcode != changedUser.zipcode')

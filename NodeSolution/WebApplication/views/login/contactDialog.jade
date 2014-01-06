@@ -1,0 +1,18 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+form
+    .modal-header
+        h1
+            i.wide.icon-envelope
+            | Kontakt
+    .modal-body
+        p Falls Du eine Frage zu unserem Projekt oder Anmerkungen jeglicher Art hast, würden wir uns über eine Kontaktaufnahme sehr freuen. Damit wir Dir antworten können, gib bitte auch Deine Kontakt-E-Mail-Adresse an.
+        p: input(class="fullWidth", type="email", ng-model="contact.email", placeholder="E-Mail-Adresse für Rückantwort", required)
+        textarea(class="form-control fullWidth", rows="6", ng-model="contact.message", placeholder="Nachricht", required)
+    .modal-footer
+        gm-button(ng-disabled="contact.message==undefined || contact.message=='' || contact.email==undefined || contact.email==''", ng-click='send(contact)', type='submit') Senden
+        gm-button(ng-click='close()') Abbrechen

@@ -1,0 +1,318 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 21.05.13
+   Time: 12:42
+   To change this template use File | Settings | File Templates.
+div
+    span#top
+    nav
+        ul.inline
+            li: a(href='#login') Login
+            li: a(href='#startAction') Start Action
+            li: a(href='#addWifi') Add Wifi
+            li: a(href='#gpsInput') Input GPS
+            li: a(href='#wifiInput') Input Wifi
+            li: a(href='#bluetoothInputStatic') Input Bluetooth (Static)
+            li: a(href='#bluetoothInputMobile') Input Bluetooth (Mobile)
+            li: a(href='#pointOutput') Output Points
+
+    h3#login Login
+    a(href='#top') [top]
+    markdown.
+        **Path:** `/login`
+
+        **Parameter:**
+
+            {
+                username : String,
+                password : String
+            }
+
+        **Returns**
+
+            {
+                userId : Integer
+            }
+
+        **Response Codes**
+
+        - `202 Accepted`
+        - `401 Unauthorized`
+        - `503 Service unavailable`
+
+    h3#startAction Start Action
+    a(href='#top') [top]
+    markdown.
+        **Path:** `/startAction`
+
+        **Parameter:**
+
+            {
+                userId : Integer,
+                actionType : Integer,
+                mac : String
+            }
+
+        **Returns:**
+
+            none
+
+        **Response Codes**
+
+        - `200 Ok`
+        - `400 Bad request`
+        - `503 Service unavailable`
+
+    h3#startAction Stop Action
+    a(href='#top') [top]
+    markdown.
+        **Path:** `/stopAction`
+
+        **Parameter:**
+
+            {
+                userId : Integer
+            }
+
+        **Returns:**
+
+            {
+                points : Integer
+            }
+
+        **Response Codes**
+
+        - `200 Ok`
+        - `400 Bad request`
+        - `503 Service unavailable`
+
+    h3#gpsInput GPS Input
+    a(href='#top') [top]
+    markdown.
+        **Path:** `/input/gps`
+
+        **Parameters:**
+
+            {
+                userId : Integer
+                lat : Number,
+                lng : Number,
+                time : Long,
+                speed : Number,
+                accuracy : Number
+            }
+
+        **Returns:**
+
+            none
+
+        **Response Codes:**
+
+        - `204 No content`
+        - `400 Bad request`
+        - `503 Service unavailable`
+
+    h3#wifiInput Wifi Input
+    a(href='#top') [top]
+    markdown.
+        **Path:** `/input/wifi`
+
+        **Parameters:**
+
+            {
+                userId : Integer
+                wifirouterId : String[],
+                time : Long
+            }
+
+        **Returns:**
+
+            none
+
+        **Response Codes:**
+
+        - `204 No content`
+        - `400 Bad request`
+        - `503 Service unavailable`
+
+    h3#bluetoothInputStatic Bluetooth Input (Static)
+    a(href='#top') [top]
+    markdown.
+        **Path:** `/input/bluetoothStatic`
+        **Parameters:**
+
+            {
+                bssid : String,
+                scanResult : [
+                    {
+                        time : Long,
+                        bluetoothId : String
+                    }, ...
+                ]
+            }
+
+        **Returns:**
+
+            none
+
+        **Response Codes:**
+
+        - `200 Ok`
+        - `202 Accepted`
+        - `204 No content`
+        - `400 Bad request`
+        - `401 Unauthorized`
+        - `503 Service unavailable`
+
+    h3#bluetoothInputMobile Bluetooth Input (Mobile)
+    a(href='#top') [top]
+    markdown.
+        **Path:** `/input/bluetoothMobile`
+        **Parameters:**
+
+            {
+                bssid : String,
+                lat : Number,
+                lng : Number,
+                scanResult : [
+                    {
+                        time : Long,
+                        bluetoothId : String
+                    }, ...
+                ]
+            }
+
+        **Returns:**
+
+            none
+
+        **Response Codes:**
+
+        - `200 Ok`
+        - `202 Accepted`
+        - `204 No content`
+        - `400 Bad request`
+        - `401 Unauthorized`
+        - `503 Service unavailable`
+
+    h3#pointOutput Point output
+    a(href='#top') [top]
+    markdown.
+        **Path:** `/output/points`
+
+        **Parameters:**
+
+            {
+                userId : integer
+            }
+
+        **Returns:**
+
+            {
+                points : Integer
+            }
+
+        **Response Codes:**
+
+        - `200 Ok`
+        - `400 Bad request`
+        - `503 Service unavailable`
+
+    h3#pointOutput Wifi Router Types
+    a(href='#top') [top]
+    markdown.
+        **Path:** `/output/wifiroutertypes`
+
+        **Parameters:**
+
+            none
+
+        **Returns:**
+
+            {
+                1 : "Primary Wifi Router"
+                2 : "Derivated Wifi Router"
+            }
+
+        **Response Codes:**
+
+        - `200 Ok`
+        - `400 Bad request`
+        - `503 Service unavailable`
+
+    h3#pointOutput Bluetooth Sensor Types
+    a(href='#top') [top]
+    markdown.
+        **Path:** `/output/bluetoothsensortypes`
+
+        **Parameters:**
+
+            none
+
+        **Returns:**
+
+            {
+                1 : "Static Bluetooth Sensor"
+                2 : "Mobile Bluetooth Sensor"
+            }
+
+        **Response Codes:**
+
+        - `200 Ok`
+        - `400 Bad request`
+        - `503 Service unavailable`
+
+    h3#addWifi Add wifi
+    a(href='#top') [top]
+    markdown.
+        **Path:** `/addWifi`
+
+        **Parameter:**
+
+            {
+                bssid : String,
+                ssid : String,
+                lat : Number,
+                lng : Number,
+                time : Long,
+                typeId : Integer,
+                pointsperdetection : Integer (optional, default: 5)
+            }
+
+        **Returns:**
+
+            none
+
+        **Response Codes**
+
+        - `200 Ok`
+        - `400 Bad request`
+        - `503 Service unavailable`
+
+    h3#addWifi Add Bluetooth
+    a(href='#top') [top]
+    markdown.
+        **Path:** `/addWifi`
+
+        **Parameter:**
+
+            {
+                bssid : String,
+                lat : Number,
+                lng : Number,
+                time : Long,
+                typeId : Integer,
+                pointsperdetection : Integer (optional, default: 5)
+            }
+
+        **Returns:**
+
+            none
+
+        **Response Codes**
+
+        - `200 Ok`
+        - `400 Bad request`
+        - `503 Service unavailable`
+

@@ -1,0 +1,21 @@
+//
+   Created with JetBrains WebStorm.
+   User: DennisHoeting
+   Date: 09.05.13
+   Time: 11:42
+   To change this template use File | Settings | File Templates.
+.modal-header
+    h1 Account löschen
+.modal-body
+    .block
+        h1 Deine Daten
+        p Was soll mit deinen Daten geschehen?
+        h5
+            input(type="radio", ng-value="ANONYMIZE", ng-model="dataAction")
+            span.wide Daten anonymisieren
+        h5
+            input(type="radio", ng-value="DELETE", ng-model="dataAction")
+            span.wide Daten löschen
+.modal-footer
+    gm-button(ng-click='delete()') Account unwiederuflich Löschen
+    gm-button(ng-click='close()') Abbrechen

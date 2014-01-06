@@ -1,0 +1,15 @@
+.content {
+    padding-right: 230px;
+}
+
+aside {
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    width: 220px;
+    text-align: center;
+}
+
+aside h1 {
+    font-size: 16px;
+}

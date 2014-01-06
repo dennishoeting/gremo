@@ -1,0 +1,71 @@
+div.actionDay {
+    letter-spacing: 1px;
+}
+
+div.action,
+div.message{
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid #000;
+}
+
+div.message {
+    background-color: #9DD454;
+}
+div.message:hover {
+    color: black;
+}
+div.message a {
+    color: #4F4F4F;
+}
+
+div.action.actiontype-1 {
+    background-color: #9DD454;
+}
+div.action.actiontype-1:hover {
+    color: black;
+}
+div.action.actiontype-2 {
+    background-color: #9DD454;
+}
+div.action.actiontype-2:hover {
+    color: black;
+}
+div.action.actiontype-3 {
+    background-color: #9DD454;
+}
+div.action.actiontype-3:hover {
+    color: black;
+}
+
+div.action.active,
+div.message.active {
+    background-color: #83AF46;
+    color: black;
+}
+
+.actionNav:first-child {
+    padding-left: 10px;
+}
+
+.contentColumn .mapContent {
+    right: 2px;
+}
+
+.lockedZoneDialog,
+.uploadTrackDialog,
+.dataDialog {
+    height: 500px;
+    width: 700px;
+}
+
+.lockedZoneDialog .modal-body,
+.uploadTrackDialog .modal-body,
+.dataDialog .modal-body {
+    height: 350px;
+}
+
+.changePasswordDialog {
+    width: 380px;
+}
+
